@@ -1,12 +1,21 @@
 [build]
   command = "npm run build"
   publish = "dist"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
 
 [[redirects]]
   from = "https://www.sgindustrialproperties.com/*"
   to = "https://sgindustrialproperties.com/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
 
 [[redirects]]
   from = "/*"

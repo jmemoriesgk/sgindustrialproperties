@@ -1,0 +1,128 @@
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: "Create {{collection}} {{slug}}"
+    update: "Update {{collection}} {{slug}}"
+    delete: "Delete {{collection}} {{slug}}"
+    uploadMedia: "Upload {{path}}"
+    deleteMedia: "Delete {{path}}"
+
+# Use editorial workflow for review before publishing
+publish_mode: editorial_workflow
+
+# Media uploads
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+# Collections
+collections:
+  - name: "listings"
+    label: "Property Listings"
+    folder: "public/listings"
+    create: true
+    slug: "{{id}}"
+    extension: "json"
+    format: "json"
+    identifier_field: "id"
+    summary: "{{name}} ({{status}}) — {{priceDisplay}}"
+    sortable_fields: ["dateAdded", "price", "name"]
+    view_filters:
+      - label: Available
+        field: status
+        pattern: "available"
+      - label: Sold
+        field: status
+        pattern: "sold"
+      - label: Rented
+        field: status
+        pattern: "rented"
+    view_groups:
+      - label: Status
+        field: status
+      - label: Type
+        field: type
+      - label: District
+        field: districtCode
+    fields:
+      - { label: "ID", name: "id", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string", required: true, hint: "URL-friendly name, e.g. gate-plus-tukang-jurong" }
+      - { label: "Property Name", name: "name", widget: "string", required: true }
+      - label: "Property Type"
+        name: "type"
+        widget: "select"
+        options: ["B1 Clean Industrial", "B1/B2 Mixed-Use", "B2 Factory", "B2 Food Hub", "B1 Industrial", "Warehouse"]
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options: ["available", "sold", "rented", "withdrawn"]
+        default: "available"
+      - { label: "Price (SGD)", name: "price", widget: "number", required: true, value_type: "int", min: 0 }
+      - { label: "Price Display", name: "priceDisplay", widget: "string", required: true, hint: "e.g. S$1,200,000" }
+      - { label: "Size (sqft)", name: "size", widget: "number", required: true, value_type: "int", min: 0 }
+      - { label: "Size Display", name: "sizeDisplay", widget: "string", required: true, hint: "e.g. 2,153 sqft" }
+      - label: "Tenure"
+        name: "tenure"
+        widget: "select"
+        options: ["Freehold", "99-Year", "103-Year", "30-Year", "33-Year", "60-Year", "999-Year"]
+      - { label: "Address", name: "address", widget: "string", required: true }
+      - { label: "District", name: "district", widget: "string", required: true, hint: "e.g. D22 — Tuas / Jurong" }
+      - { label: "District Code", name: "districtCode", widget: "string", required: true, hint: "e.g. D22" }
+      - { label: "Description", name: "description", widget: "text", required: true }
+      - { label: "Features", name: "features", widget: "list", field: { widget: "string" } }
+      - { label: "Power Supply", name: "powerSupply", widget: "string", default: "60A / 3-phase" }
+      - { label: "Ceiling Height", name: "ceilingHeight", widget: "string", default: "6.0m" }
+      - { label: "Floor Loading", name: "floorLoading", widget: "string", default: "7.5 kN/m²" }
+      - { label: "Developer", name: "developer", widget: "string" }
+      - { label: "Total Units in Project", name: "totalUnits", widget: "number", value_type: "int", min: 0 }
+      - { label: "Units Sold", name: "unitsSold", widget: "number", value_type: "int", min: 0, default: 0 }
+      - { label: "TOP Date", name: "topDate", widget: "string", hint: "e.g. Dec 2026 or Completed" }
+      - { label: "Nearby MRT", name: "nearbyMRT", widget: "list", field: { widget: "string" } }
+      - { label: "Nearby Expressway", name: "nearbyExpressway", widget: "list", field: { widget: "string" } }
+      - { label: "Agent Name", name: "agent", widget: "string", default: "James Goh" }
+      - { label: "Agent CEA", name: "agentCea", widget: "string", default: "R002565A" }
+      - { label: "Agent Phone", name: "agentPhone", widget: "string", default: "+65 9768 7722" }
+      - { label: "Agent Photo", name: "agentPhoto", widget: "image", default: "/images/team-james-new.jpg" }
+      - { label: "Photos", name: "photos", widget: "list", field: { widget: "image" }, default: [] }
+      - { label: "Floor Plans", name: "floorplans", widget: "list", field: { widget: "image" }, default: [] }
+      - { label: "Brochure URL", name: "brochure", widget: "string", default: "" }
+      - { label: "Tags", name: "tags", widget: "list", field: { widget: "string" } }
+      - { label: "Suitable For", name: "suitableFor", widget: "list", field: { widget: "string" } }
+      - { label: "SEO Title", name: "metaTitle", widget: "string" }
+      - { label: "SEO Description", name: "metaDescription", widget: "text" }
+      - { label: "Date Added", name: "dateAdded", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+
+  - name: "agents"
+    label: "Agents"
+    folder: "public/agents"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    identifier_field: "slug"
+    summary: "{{name}} ({{cea}})"
+    fields:
+      - { label: "Slug", name: "slug", widget: "string", required: true }
+      - { label: "Name", name: "name", widget: "string", required: true }
+      - { label: "CEA Number", name: "cea", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Photo", name: "image", widget: "image" }
+      - { label: "Phone", name: "phone", widget: "string" }
+      - { label: "Email", name: "email", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "text" }
+      - { label: "Specialties", name: "specialties", widget: "list", field: { widget: "string" } }
+      - { label: "Districts", name: "districts", widget: "list", field: { widget: "string" } }
+      - { label: "Languages", name: "languages", widget: "list", field: { widget: "string" } }
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Facebook Settings"
+        name: "fbSettings"
+        file: "public/admin/settings.json"
+        fields:
+          - { label: "Auto-post to Facebook", name: "autoPost", widget: "boolean", default: true }
+          - { label: "Post on status change to Sold", name: "postOnSold", widget: "boolean", default: true }
+          - { label: "Post on new listing", name: "postOnNew", widget: "boolean", default: true }
+          - { label: "Page ID", name: "pageId", widget: "string", hint: "Your Facebook Page ID" }
+          - { label: "Default Post Format", name: "postFormat", widget: "text", default: "🏭 {{name}}\n💰 {{price}}\n📍 {{address}}\n👉 {{url}}" }

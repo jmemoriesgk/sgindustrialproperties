@@ -1,0 +1,377 @@
+[
+  {
+    "id": "SGI-001",
+    "slug": "gate-plus-tukang-jurong-unit-205",
+    "name": "Gate+ @ Tukang Jurong \u2014 Unit #02-05",
+    "type": "B2 Factory",
+    "status": "available",
+    "price": 1200000,
+    "priceDisplay": "S$1,200,000",
+    "size": 2153,
+    "sizeDisplay": "2,153 sqft",
+    "tenure": "33-Year",
+    "address": "18 Tukang, Jurong",
+    "district": "D22 \u2014 Tuas / Jurong",
+    "districtCode": "D22",
+    "description": "Rare 3-storey ramp-up B2 factory unit at Gate+ @ Tukang. 7m ceiling height, 10-tonne floor loading, direct container access. Ideal for heavy manufacturing, logistics, and warehousing.",
+    "features": [
+      "Ramp-up access",
+      "Container direct",
+      "7m ceiling",
+      "10-tonne floor loading",
+      "Loading bay",
+      "3-phase power"
+    ],
+    "powerSupply": "200A / 3-phase",
+    "ceilingHeight": "7.0m",
+    "floorLoading": "10.0 kN/m\u00b2",
+    "developer": "SinarMas Land",
+    "totalUnits": 265,
+    "unitsSold": 142,
+    "topDate": "Jan 2029",
+    "nearbyMRT": [
+      "Joo Koon MRT (EW29)",
+      "Tuas West Road MRT (EW32)"
+    ],
+    "nearbyExpressway": [
+      "PIE (5 min)",
+      "AYE (8 min)"
+    ],
+    "agent": "James Goh",
+    "agentCea": "R002565A",
+    "agentPhone": "+65 9768 7722",
+    "agentPhoto": "/images/team-james-new.jpg",
+    "photos": [
+      "/images/gate-plus-hero.jpg"
+    ],
+    "floorplans": [],
+    "brochure": "",
+    "tags": [
+      "ramp-up",
+      "heavy-industrial",
+      "new-launch"
+    ],
+    "suitableFor": [
+      "Manufacturing",
+      "Logistics",
+      "Warehousing"
+    ],
+    "metaTitle": "Gate+ Tukang Jurong B2 Factory For Sale | S$1.2M | SG Industrial Properties",
+    "metaDescription": "B2 ramp-up factory at Gate+ Tukang Jurong. 2,153 sqft, 7m ceiling, 10-tonne loading. New launch 2026. No ABSD. Contact James Goh +65 9768 7722.",
+    "dateAdded": "2026-07-14"
+  },
+  {
+    "id": "SGI-002",
+    "slug": "ct-gold-macpherson-level-4",
+    "name": "CT Gold @ Macpherson \u2014 Level 4 Unit",
+    "type": "B1/B2 Mixed-Use",
+    "status": "sold",
+    "price": 2500000,
+    "priceDisplay": "S$2,500,000",
+    "size": 3875,
+    "sizeDisplay": "3,875 sqft",
+    "tenure": "Freehold",
+    "address": "11 Macpherson Road",
+    "district": "D13 \u2014 Macpherson / Potong Pasir",
+    "districtCode": "D13",
+    "description": "Stunning B1/B2 mixed-use unit at CT Gold with floor-to-ceiling glass facade. Premium specifications with 5.5m ceiling, 7.5 kN/m\u00b2 floor loading, and 100A 3-phase power.",
+    "features": [
+      "Glass facade",
+      "Helical parking ramp",
+      "5.5m ceiling",
+      "100A power",
+      "Ground floor F&B",
+      "Modern lobby"
+    ],
+    "powerSupply": "100A / 3-phase",
+    "ceilingHeight": "5.5m",
+    "floorLoading": "7.5 kN/m\u00b2",
+    "developer": "Chip Eng Seng",
+    "totalUnits": 120,
+    "unitsSold": 120,
+    "topDate": "Completed",
+    "nearbyMRT": [
+      "MacPherson MRT (CC10/DT26)",
+      "Potong Pasir MRT (NE10)"
+    ],
+    "nearbyExpressway": [
+      "PIE (3 min)",
+      "KPE (5 min)"
+    ],
+    "agent": "Caroline Chan",
+    "agentCea": "R046614C",
+    "agentPhone": "+65 9768 7722",
+    "agentPhoto": "/images/Caroline-Chan-R046614C.jpg",
+    "photos": [
+      "/images/ct-gold-hero.jpg"
+    ],
+    "floorplans": [],
+    "brochure": "",
+    "tags": [
+      "freehold",
+      "mixed-use",
+      "glass-facade",
+      "fully-sold"
+    ],
+    "suitableFor": [
+      "Light manufacturing",
+      "R&D",
+      "Showroom",
+      "Office"
+    ],
+    "metaTitle": "CT Gold Macpherson B1/B2 Industrial | Freehold | SG Industrial Properties",
+    "metaDescription": "CT Gold at Macpherson \u2014 B1/B2 mixed-use industrial. 3,875 sqft, freehold, glass facade. 100% sold. Contact SG Industrial Properties +65 9768 7722.",
+    "dateAdded": "2026-07-14"
+  },
+  {
+    "id": "SGI-003",
+    "slug": "space18-lorong-ampas-unit-301",
+    "name": "SPACE@18 \u2014 Unit #03-01",
+    "type": "B1 Clean Industrial",
+    "status": "available",
+    "price": 980000,
+    "priceDisplay": "S$980,000",
+    "size": 1722,
+    "sizeDisplay": "1,722 sqft",
+    "tenure": "Freehold",
+    "address": "18 Lorong Ampas",
+    "district": "D12 \u2014 Balestier / Whampoa",
+    "districtCode": "D12",
+    "description": "Brand new freehold B1 clean industrial unit at SPACE@18. Full-height glass wall facade, 6.3m ceiling height, 7.5 kN/m\u00b2 floor loading. TOP Dec 2026.",
+    "features": [
+      "Full-height glass facade",
+      "6.3m ceiling",
+      "7.5 kN/m\u00b2 loading",
+      "60A 3-phase power",
+      "Freehold",
+      "3 loading bays"
+    ],
+    "powerSupply": "60A / 3-phase",
+    "ceilingHeight": "6.3m",
+    "floorLoading": "7.5 kN/m\u00b2",
+    "developer": "JVA Whampoa Pte Ltd",
+    "totalUnits": 46,
+    "unitsSold": 12,
+    "topDate": "Dec 2026",
+    "nearbyMRT": [
+      "Novena MRT (NS20)",
+      "Toa Payoh MRT (NS19)"
+    ],
+    "nearbyExpressway": [
+      "CTE (3 min)",
+      "PIE (5 min)"
+    ],
+    "agent": "Alvin Lim",
+    "agentCea": "R042513G",
+    "agentPhone": "+65 9768 7722",
+    "agentPhoto": "/images/Alvin-Lim-R042513G.jpg",
+    "photos": [
+      "/images/space-18-hero.jpg"
+    ],
+    "floorplans": [],
+    "brochure": "",
+    "tags": [
+      "freehold",
+      "new-launch",
+      "glass-facade",
+      "b1-clean"
+    ],
+    "suitableFor": [
+      "Clean manufacturing",
+      "R&D",
+      "Showroom",
+      "Assembly"
+    ],
+    "metaTitle": "SPACE@18 Lorong Ampas B1 Industrial For Sale | S$980K | SG Industrial Properties",
+    "metaDescription": "SPACE@18 at 18 Lorong Ampas \u2014 B1 freehold industrial. 1,722 sqft, glass facade, TOP Dec 2026. No ABSD. Contact Alvin Lim +65 9768 7722.",
+    "dateAdded": "2026-07-14"
+  },
+  {
+    "id": "SGI-004",
+    "slug": "space-nova-new-industrial-road-unit-101",
+    "name": "Space Nova \u2014 Unit #01-01",
+    "type": "B1 Clean Industrial",
+    "status": "available",
+    "price": 1350000,
+    "priceDisplay": "S$1,350,000",
+    "size": 2580,
+    "sizeDisplay": "2,580 sqft",
+    "tenure": "Freehold",
+    "address": "21 New Industrial Road",
+    "district": "D19 \u2014 Hougang / Serangoon",
+    "districtCode": "D19",
+    "description": "Premium freehold B1 clean industrial at Space Nova. Ramp-up access, 6.5m ceiling on Level 1, private attached toilet, communal sky terrace. 4 EV charging lots.",
+    "features": [
+      "Ramp-up access",
+      "6.5m ceiling",
+      "Private toilet",
+      "Communal sky terrace",
+      "4 EV lots",
+      "100A power"
+    ],
+    "powerSupply": "100A / 3-phase",
+    "ceilingHeight": "6.5m",
+    "floorLoading": "7.5 kN/m\u00b2",
+    "developer": "Space Nova Development Pte Ltd",
+    "totalUnits": 47,
+    "unitsSold": 8,
+    "topDate": "2027",
+    "nearbyMRT": [
+      "Tai Seng MRT (CC11)",
+      "Bartley MRT (CC12)"
+    ],
+    "nearbyExpressway": [
+      "CTE (5 min)",
+      "PIE (5 min)"
+    ],
+    "agent": "James Goh",
+    "agentCea": "R002565A",
+    "agentPhone": "+65 9768 7722",
+    "agentPhoto": "/images/team-james-new.jpg",
+    "photos": [
+      "/images/space-nova-hero.jpg"
+    ],
+    "floorplans": [],
+    "brochure": "",
+    "tags": [
+      "freehold",
+      "new-launch",
+      "ramp-up",
+      "ev-charging"
+    ],
+    "suitableFor": [
+      "Light manufacturing",
+      "R&D",
+      "Warehouse",
+      "Assembly"
+    ],
+    "metaTitle": "Space Nova New Industrial Road B1 Industrial For Sale | S$1.35M | SG Industrial Properties",
+    "metaDescription": "Space Nova at 21 New Industrial Road \u2014 B1 freehold industrial. 2,580 sqft, ramp-up, sky terrace. No ABSD. Contact James Goh +65 9768 7722.",
+    "dateAdded": "2026-07-14"
+  },
+  {
+    "id": "SGI-005",
+    "slug": "generations-tannery-lane-unit-705",
+    "name": "Generations@Tannery \u2014 Unit #07-05",
+    "type": "B1 Industrial",
+    "status": "available",
+    "price": 1680000,
+    "priceDisplay": "S$1,680,000",
+    "size": 1938,
+    "sizeDisplay": "1,938 sqft",
+    "tenure": "Freehold",
+    "address": "71 Tannery Lane",
+    "district": "D13 \u2014 Macpherson / Potong Pasir",
+    "districtCode": "D13",
+    "description": "Rare 12-storey freehold B1 industrial at 71 Tannery Lane. 54 production units + 5 canteens. Mattar MRT 6-min walk. 51 parking lots with 10 EV chargers.",
+    "features": [
+      "Freehold",
+      "12 storeys",
+      "54 units",
+      "5 canteens",
+      "51 parking lots",
+      "10 EV chargers"
+    ],
+    "powerSupply": "60A / 3-phase",
+    "ceilingHeight": "5.5m",
+    "floorLoading": "7.5 kN/m\u00b2",
+    "developer": "Providence Estates (Tannery) Pte Ltd",
+    "totalUnits": 54,
+    "unitsSold": 31,
+    "topDate": "Completed",
+    "nearbyMRT": [
+      "Mattar MRT (DT25)",
+      "MacPherson MRT (CC10/DT26)"
+    ],
+    "nearbyExpressway": [
+      "PIE (3 min)",
+      "KPE (5 min)"
+    ],
+    "agent": "Amanda Chuah",
+    "agentCea": "R056404H",
+    "agentPhone": "+65 9768 7722",
+    "agentPhoto": "/images/Amanda-Chuah-R056404H.jpg",
+    "photos": [
+      "/images/generations-tannery-hero.png"
+    ],
+    "floorplans": [],
+    "brochure": "",
+    "tags": [
+      "freehold",
+      "completed",
+      "near-mrt",
+      "ev-chargers"
+    ],
+    "suitableFor": [
+      "Clean manufacturing",
+      "Assembly",
+      "R&D",
+      "Distribution"
+    ],
+    "metaTitle": "Generations@Tannery 71 Tannery Lane B1 Industrial For Sale | S$1.68M | SG Industrial Properties",
+    "metaDescription": "Generations@Tannery \u2014 B1 freehold industrial at 71 Tannery Lane. 1,938 sqft, near Mattar MRT. No ABSD. Contact Amanda Chuah +65 9768 7722.",
+    "dateAdded": "2026-07-14"
+  },
+  {
+    "id": "SGI-006",
+    "slug": "gourmet-xchange-kallang-way-unit-201",
+    "name": "Gourmet Xchange \u2014 Unit #02-01",
+    "type": "B2 Food Hub",
+    "status": "available",
+    "price": 850000,
+    "priceDisplay": "S$850,000",
+    "size": 1410,
+    "sizeDisplay": "1,410 sqft",
+    "tenure": "99-Year",
+    "address": "1 Kallang Way",
+    "district": "D14 \u2014 Geylang / Eunos",
+    "districtCode": "D14",
+    "description": "Singapore largest strata-titled food hub. 272 units across 9-storey main block and 3-storey heritage terrace. Kallang Riverfront, Green Mark Platinum.",
+    "features": [
+      "Food hub",
+      "Heritage terrace",
+      "Riverfront",
+      "Green Mark Platinum",
+      "Loading bay",
+      "Waste management"
+    ],
+    "powerSupply": "100A / 3-phase",
+    "ceilingHeight": "6.0m",
+    "floorLoading": "7.5 kN/m\u00b2",
+    "developer": "CL Savour Property Pte Ltd",
+    "totalUnits": 272,
+    "unitsSold": 89,
+    "topDate": "2028",
+    "nearbyMRT": [
+      "Kallang MRT (EW10)",
+      "Mountbatten MRT (CC7)"
+    ],
+    "nearbyExpressway": [
+      "PIE (3 min)",
+      "ECP (5 min)"
+    ],
+    "agent": "David Yong",
+    "agentCea": "R056841H",
+    "agentPhone": "+65 9768 7722",
+    "agentPhoto": "/images/David-Yong-R056841H.jpg",
+    "photos": [
+      "/images/gourmet-xchange-hero.jpg"
+    ],
+    "floorplans": [],
+    "brochure": "",
+    "tags": [
+      "food-hub",
+      "new-launch",
+      "green-mark",
+      "heritage"
+    ],
+    "suitableFor": [
+      "Central kitchen",
+      "Food manufacturing",
+      "F&B production"
+    ],
+    "metaTitle": "Gourmet Xchange Kallang Way B2 Food Hub For Sale | S$850K | SG Industrial Properties",
+    "metaDescription": "Gourmet Xchange at 1 Kallang Way \u2014 B2 food hub. 1,410 sqft, strata-titled, heritage terrace. No ABSD. Contact David Yong +65 9768 7722.",
+    "dateAdded": "2026-07-14"
+  }
+]
