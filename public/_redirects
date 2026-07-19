@@ -1,5 +1,11 @@
-# Redirect www to non-www (canonical - matching server config)
+# Redirect www to non-www (canonical)
 https://www.sgindustrialproperties.com/* https://sgindustrialproperties.com/:splat 301!
 
-# SPA fallback
+# Admin panel — serve static files (NOT SPA)
+/admin/* /admin/:splat 200
+
+# Listings data — serve static JSON
+/listings/data.json /listings/data.json 200
+
+# SPA fallback for React routes only
 /* /index.html 200

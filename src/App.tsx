@@ -12,9 +12,11 @@ import Team from './pages/Team'
 import AgentDetail from './pages/AgentDetail'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
+import ListingsPage from './pages/ListingsPage'
+import ListingDetail from './pages/ListingDetail'
 import ScrollToTop from './components/ScrollToTop'
 
-const BUILD_VERSION = 'v5-luxury-2026-07-06'
+const BUILD_VERSION = 'v6-listings-2026-07-14'
 console.log('SG Industrial Properties', BUILD_VERSION)
 
 function App() {
@@ -43,6 +45,8 @@ function App() {
           <Route path="/team/:slug" element={<AgentDetail />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/listings" element={<ListingsPage />} />
+          <Route path="/listings/:slug" element={<ListingDetail />} />
         </Routes>
       </main>
       <Footer />
