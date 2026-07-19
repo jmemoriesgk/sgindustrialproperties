@@ -1,5 +1,0 @@
-# Redirect www to non-www (canonical - matching server config)
-https://www.sgindustrialproperties.com/* https://sgindustrialproperties.com/:splat 301!
-
-# SPA fallback
-/* /index.html 200
