@@ -6,6 +6,7 @@ export interface Listing {
   name: string
   type: string
   status: 'available' | 'sold' | 'rented' | 'withdrawn'
+  listingType: 'sale' | 'rent'
   price: number
   priceDisplay: string
   size: number

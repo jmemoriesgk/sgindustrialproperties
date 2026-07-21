@@ -220,19 +220,41 @@ function FeaturedSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    // CSS fallback: observe cards and add in-view class when visible
+    const cards = sectionRef.current?.querySelectorAll('.featured-launch-card')
+    if (cards) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('in-view')
+            }, i * 100)
+            observer.unobserve(entry.target)
+          }
+        })
+      }, { threshold: 0.1 })
+      cards.forEach(card => observer.observe(card))
+    }
+
     const ctx = gsap.context(() => {
       gsap.from('.featured-header > *', {
         opacity: 0, y: 40, duration: 0.8, stagger: 0.1, ease: 'power3.out',
         scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
       })
       gsap.fromTo('.featured-launch-card',
-        { opacity: 0, y: 60 },
-        { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out',
+        { y: 40 },
+        { y: 0, duration: 0.7, stagger: 0.1, ease: 'power3.out',
           scrollTrigger: { trigger: '.featured-launches-grid', start: 'top 95%' },
         }
       )
     }, sectionRef)
-    return () => ctx.revert()
+    return () => {
+      ctx.revert()
+      if (cards) {
+        const observer = new IntersectionObserver(() => {})
+        cards.forEach(card => observer.unobserve(card))
+      }
+    }
   }, [])
 
   const launches = [
@@ -280,11 +302,11 @@ function FeaturedSection() {
       name: 'Generations@Tannery',
       location: '71 Tannery Lane',
       tag: 'B1 Industrial',
-      badge: 'FREEHOLD',
+      badge: '100% FULLY SOLD',
       badgeColor: '#78B0B5',
       image: '/images/generations-tannery-hero.png',
-      alt: 'Generations at Tannery 12-storey freehold B1 industrial development',
-      specs: '64 Units | Freehold | Near Mattar MRT',
+      alt: 'Generations at Tannery 12-storey freehold B1 industrial development 100% fully sold',
+      specs: '54 Units | Freehold | Near Mattar MRT',
     },
     {
       name: 'Gourmet Xchange',
@@ -349,16 +371,12 @@ function FeaturedSection() {
         </div>
 
         {/* Generations Hero Banner */}
-        <div className="mt-12 rounded-2xl overflow-hidden" style={{ backgroundColor: '#1C1A17' }}>
+        <div className="mt-12 rounded-2xl overflow-hidden" style={{ backgroundColor: '#F7F5F0' }}>
           <img
             src="/images/generations-hero.png"
             alt="Generations at Tannery - Premium freehold B1 industrial development in Singapore"
             className="w-full h-auto object-cover block"
             loading="eager"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.style.display = 'none';
-            }}
           />
         </div>
 

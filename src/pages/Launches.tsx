@@ -44,89 +44,6 @@ function LaunchesHero() {
   )
 }
 
-/* ─────────────────── PROJECT CARDS ─────────────────── */
-function ProjectCards() {
-  const ref = useRef<HTMLDivElement>(null)
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.project-card', { opacity: 0, y: 40, duration: 0.7, stagger: 0.12, ease: 'power3.out',
-        scrollTrigger: { trigger: ref.current, start: 'top 80%' } })
-    }, ref)
-    return () => ctx.revert()
-  }, [])
-
-  const projects = [
-    { id: 'gateplus', name: 'Gate+', location: '@ Tukang, Jurong', tag: 'B2 Multi-User Ramp-Up Factory', badge: 'NEW LAUNCH', badgeColor: '#4A3E3D', image: '/images/gate-plus-hero.jpg',
-      alt: 'Gate Plus at Tukang Jurong 10-storey B2 multi-user ramp-up industrial factory',
-      stats: [{ label: 'Units', value: '265+' }, { label: 'Tenure', value: '33 Yrs' }, { label: 'TOP', value: 'Jan 2029' }],
-      highlights: ['40ft Container Access', 'Green Mark Platinum', '2 Industrial Canteens'] },
-    { id: 'ctgold', name: 'CT Gold', location: 'Macpherson', tag: 'B1/B2 Mixed-Use Industrial', badge: '100% FULLY SOLD', badgeColor: '#C45D8C', image: '/images/ct-gold-hero.jpg',
-      alt: 'CT Gold at Macpherson modern multi-storey industrial commercial building with glass facade gold accents helical parking',
-      stats: [{ label: 'Storeys', value: '10+' }, { label: 'Type', value: 'B1/B2' }, { label: 'Parking', value: 'Helical Ramp' }],
-      highlights: ['Glass Facade', 'Ground Floor F&B', 'Integrated Retail'] },
-    { id: 'generations', name: 'Generations@Tannery', location: '71 Tannery Lane', tag: 'B1 Industrial — Freehold', badge: 'NEW LAUNCH', badgeColor: '#78B0B5', image: '/images/generations-tannery-hero.png',
-      alt: 'Generations at Tannery 12-storey freehold B1 industrial development at 71 Tannery Lane',
-      stats: [{ label: 'Units', value: '54' }, { label: 'Tenure', value: 'Freehold' }, { label: 'Storeys', value: '12' }],
-      highlights: ['Freehold', '6-min to Mattar MRT', '5 Industrial Canteens'] },
-    { id: 'gxc', name: 'Gourmet Xchange', location: '@ 1 Kallang Way', tag: 'B2 (Food) — Heritage Mixed-Use', badge: 'NEW LAUNCH', badgeColor: '#5DC489', image: '/images/gourmet-xchange-hero.jpg',
-      alt: 'Gourmet Xchange at Kallang Way 9-storey food hub with heritage terrace block and Kallang River waterfront',
-      stats: [{ label: 'Units', value: '272' }, { label: 'Storeys', value: '9+3' }, { label: 'Zone', value: 'Food Hub' }],
-      highlights: ['Riverfront', 'Heritage Terrace', 'Green Mark Platinum'] },
-    { id: 'space18', name: 'SPACE@18', location: 'Lorong Ampas', tag: 'B1 Clean Industrial — Freehold', badge: 'NEW LAUNCH', badgeColor: '#8E69B6', image: '/images/space-18-hero.jpg',
-      alt: 'SPACE@18 at 18 Lorong Ampas 6-storey freehold B1 clean industrial with glass wall facade',
-      stats: [{ label: 'Units', value: '46+1' }, { label: 'Tenure', value: 'Freehold' }, { label: 'TOP', value: 'Dec 2026' }],
-      highlights: ['Full-Height Glass Facade', '7.0m Ceiling (L1)', '3 Loading Bays'] },
-    { id: 'spacenova', name: 'Space Nova', location: 'New Industrial Road', tag: 'B1 Clean Industrial — Freehold', badge: 'NEW LAUNCH', badgeColor: '#6390B5', image: '/images/space-nova-hero.jpg',
-      alt: 'Space Nova at 21 New Industrial Road 7-storey freehold B1 clean industrial with glass facade and sky terrace',
-      stats: [{ label: 'Units', value: '47' }, { label: 'Tenure', value: 'Freehold' }, { label: 'Storeys', value: '7' }],
-      highlights: ['Ramp-Up Access', '4 EV Charging Lots', 'Communal Sky Terrace'] },
-  ]
-
-  return (
-    <section ref={ref} style={{ backgroundColor: '#F7F5F0' }} className="py-20">
-      <div className="max-w-[1128px] mx-auto px-6">
-        <div className="text-center mb-12">
-          <p className="mono-label mb-3" style={{ color: '#6B6560' }}>FEATURED LAUNCHES</p>
-          <h2 className="section-heading">Explore New Opportunities</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map(p => (
-            <a key={p.id} href={`#${p.id}`} className="project-card group block rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2" style={{ border: '1px solid #E8E4DC', backgroundColor: '#fff' }}>
-              <div className="relative h-56 overflow-hidden">
-                <img src={p.image} alt={p.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <span className="absolute top-4 left-4 font-sans text-xs font-semibold px-3 py-1 rounded-full" style={{ backgroundColor: p.badgeColor, color: p.badge === 'COMING SOON' || p.badge === '100% FULLY SOLD' ? '#fff' : '#1C1A17' }}>{p.badge}</span>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="font-mono text-xs mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>{p.tag}</p>
-                  <h3 className="font-serif text-xl text-white font-medium">{p.name} <span className="font-sans text-sm font-normal">{p.location}</span></h3>
-                </div>
-              </div>
-              <div className="grid grid-cols-3 gap-4 p-5" style={{ borderBottom: '1px solid #E8E4DC' }}>
-                {p.stats.map((s, i) => (
-                  <div key={i} className="text-center">
-                    <p className="font-serif text-lg font-semibold" style={{ color: '#1C1A17' }}>{s.value}</p>
-                    <p className="font-mono text-xs mt-1" style={{ color: '#6B6560' }}>{s.label}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="p-5">
-                <div className="flex flex-wrap gap-2">
-                  {p.highlights.map((h, i) => (
-                    <span key={i} className="font-sans text-xs px-3 py-1.5 rounded-lg" style={{ backgroundColor: 'rgba(246,180,107,0.12)', color: '#1C1A17' }}>{h}</span>
-                  ))}
-                </div>
-                <div className="flex items-center gap-2 mt-4 font-sans text-sm font-medium" style={{ color: '#4A3E3D' }}>
-                  View Full Details <ArrowUp size={14} className="transition-transform group-hover:translate-x-1" />
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
 /* ════════════════════════════════════════════════════════════════
    PROJECT 1 — GATE+  (preserved from before)
    ════════════════════════════════════════════════════════════════ */
@@ -803,7 +720,6 @@ export default function Launches() {
 
     {/* ─── Overview ─── */}
     <LaunchesHero />
-    <ProjectCards />
 
     {/* ─── Project 1: SPACE@18 ─── */}
     <StickyNav label="SPACE@18" href="#space18" color="#8E69B6" />

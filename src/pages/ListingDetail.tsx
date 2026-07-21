@@ -78,7 +78,7 @@ export default function ListingDetail() {
             <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-10">
               <div className="max-w-[1128px] mx-auto">
                 <span className="font-sans text-xs font-semibold px-3 py-1 rounded-full mb-3 inline-block" style={{ backgroundColor: isAvailable ? '#4A3E3D' : '#6B6560', color: '#fff' }}>
-                  {listing.status.toUpperCase()}
+                  {listing.status === 'available' ? 'FOR SALE' : listing.status === 'sold' ? 'NOT AVAILABLE (SOLD)' : listing.status === 'rented' ? 'NOT AVAILABLE (RENTED)' : listing.status.toUpperCase()}
                 </span>
                 <h1 className="font-serif text-3xl lg:text-4xl font-semibold text-white mb-2">{listing.name}</h1>
                 <p className="font-sans text-lg flex items-center gap-2" style={{ color: 'rgba(255,255,255,0.7)' }}>

@@ -2,10 +2,17 @@
 https://www.sgindustrialproperties.com/* https://sgindustrialproperties.com/:splat 301!
 
 # Admin panel — serve static files (NOT SPA)
+/admin/ /admin/index.html 200
 /admin/* /admin/:splat 200
 
-# Listings data — serve static JSON
-/listings/data.json /listings/data.json 200
+# Prerendered pages — serve static HTML for SEO
+/ /index.html 200
+/listings/ /listings/index.html 200
+/launches/ /launches/index.html 200
+/properties/ /properties/index.html 200
+/about/ /about/index.html 200
+/team/ /team/index.html 200
+/blog/ /blog/index.html 200
 
-# SPA fallback for React routes only
+# SPA fallback for any unmatched routes
 /* /index.html 200

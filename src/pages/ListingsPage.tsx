@@ -40,7 +40,22 @@ export default function ListingsPage() {
       result = result.filter(l => l.type === selectedType)
     }
     if (selectedStatus) {
-      result = result.filter(l => l.status === selectedStatus)
+      switch (selectedStatus) {
+        case 'available':
+          result = result.filter(l => l.status === 'available')
+          break
+        case 'rent':
+          result = result.filter(l => l.listingType === 'rent')
+          break
+        case 'rented':
+          result = result.filter(l => l.status === 'rented')
+          break
+        case 'sold':
+          result = result.filter(l => l.status === 'sold')
+          break
+        default:
+          result = result.filter(l => l.status === selectedStatus)
+      }
     }
 
     switch (sortBy) {
@@ -59,9 +74,9 @@ export default function ListingsPage() {
 
   const statusBadge = (status: string) => {
     const styles: Record<string, { bg: string; text: string; label: string }> = {
-      available: { bg: '#E8F5E9', text: '#2E7D32', label: 'Available' },
-      sold: { bg: '#F5F5F5', text: '#6B6560', label: 'Sold' },
-      rented: { bg: '#E3F2FD', text: '#1565C0', label: 'Rented' },
+      available: { bg: '#E8F5E9', text: '#2E7D32', label: 'For Sale' },
+      sold: { bg: '#F5F5F5', text: '#6B6560', label: 'Not Available (Sold)' },
+      rented: { bg: '#E3F2FD', text: '#1565C0', label: 'Not Available (Rented)' },
       withdrawn: { bg: '#FFF3E0', text: '#E65100', label: 'Withdrawn' },
     }
     const s = styles[status] || styles.available
@@ -128,9 +143,10 @@ export default function ListingsPage() {
             </select>
             <select value={selectedStatus} onChange={e => { setSelectedStatus(e.target.value); setCurrentPage(1) }} className="font-sans text-sm px-4 py-2.5 rounded-lg border" style={{ borderColor: '#E8E4DC', backgroundColor: '#fff', color: '#1C1A17' }}>
               <option value="">All Status</option>
-              <option value="available">Available</option>
-              <option value="sold">Sold</option>
-              <option value="rented">Rented</option>
+              <option value="available">For Sale</option>
+              <option value="rent">For Rent</option>
+              <option value="rented">Not Available (Rented)</option>
+              <option value="sold">Not Available (Sold)</option>
             </select>
             <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="font-sans text-sm px-4 py-2.5 rounded-lg border" style={{ borderColor: '#E8E4DC', backgroundColor: '#fff', color: '#1C1A17' }}>
               <option value="newest">Newest</option>
