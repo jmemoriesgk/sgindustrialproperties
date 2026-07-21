@@ -5,25 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SG Industrial Properties — Content Manager</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <!-- Netlify Identity Widget -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1c1a17;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .loading-container {
+      text-align: center;
+      padding: 2rem;
+    }
+    .loading-spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(255,255,255,0.1);
+      border-top-color: #f5c443;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1.5rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .loading-subtitle { font-size: 0.875rem; opacity: 0.6; }
+    .error-box {
+      background: rgba(255,80,80,0.1);
+      border: 1px solid rgba(255,80,80,0.3);
+      border-radius: 8px;
+      padding: 1.5rem;
+      max-width: 400px;
+      display: none;
+    }
+    .error-box.show { display: block; }
+    .error-box h3 { color: #ff6b6b; margin-bottom: 0.5rem; }
+    .error-box p { font-size: 0.875rem; opacity: 0.8; line-height: 1.5; }
+    .error-box code {
+      background: rgba(255,255,255,0.1);
+      padding: 0.125rem 0.375rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+  </style>
 </head>
 <body>
+  <div id="loading" class="loading-container">
+    <div class="loading-spinner"></div>
+    <div class="loading-title">Loading Content Manager</div>
+    <div class="loading-subtitle">Please wait...</div>
+  </div>
+
+  <div id="error" class="loading-container error-box">
+    <h3>Loading Error</h3>
+    <p id="error-message">Failed to load the CMS. Please check your connection and try again.</p>
+  </div>
+
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
   <!-- Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
   <script>
-    // Initialize Netlify Identity
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
+    (function() {
+      var loading = document.getElementById('loading');
+      var error = document.getElementById('error');
+      var errorMsg = document.getElementById('error-message');
+
+      // Show error helper
+      function showError(msg) {
+        loading.style.display = 'none';
+        error.classList.add('show');
+        errorMsg.textContent = msg;
+        console.error('[CMS Error]', msg);
+      }
+
+      // Check if scripts loaded
+      if (typeof CMS === 'undefined') {
+        showError('CMS script failed to load. Check your internet connection.');
+        return;
+      }
+
+      // Initialize Netlify Identity
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', function(user) {
+          if (!user) {
+            window.netlifyIdentity.on('login', function() {
+              window.location.href = '/admin/';
+            });
+          }
+        });
+
+        // If not logged in, open login modal
+        window.netlifyIdentity.on('init', function(user) {
+          if (!user) {
+            window.netlifyIdentity.open('login');
+          }
+        });
+      } else {
+        showError('Netlify Identity widget not loaded. Make sure Identity is enabled in your Netlify dashboard.');
+        return;
+      }
+
+      // Try to load config and init CMS
+      try {
+        // Load the CMS config manually first
+        fetch('/admin/config.yml')
+          .then(function(res) {
+            if (!res.ok) {
+              throw new Error('Config file not found (HTTP ' + res.status + ')');
+            }
+            return res.text();
+          })
+          .then(function() {
+            // Config loaded successfully, now init CMS
+            loading.innerHTML = '<div class="loading-spinner"></div><div class="loading-title">Starting CMS...</div>';
+            CMS.init();
+          })
+          .catch(function(err) {
+            showError('Failed to load CMS config: ' + err.message);
           });
-        }
-      });
-    }
-    // Initialize CMS
-    CMS.init();
+      } catch (err) {
+        showError('Unexpected error: ' + err.message);
+      }
+    })();
   </script>
 </body>
 </html>

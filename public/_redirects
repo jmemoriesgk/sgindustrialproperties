@@ -1,15 +1,15 @@
 # Redirect www to non-www (canonical)
 https://www.sgindustrialproperties.com/* https://sgindustrialproperties.com/:splat 301!
 
-# Admin panel — serve static files (NOT SPA)
-/admin /admin/index.html 200
-/admin/ /admin/index.html 200
-/admin/* /admin/:splat 200
+# Admin panel — serve static files first (force, before SPA catch-all)
+/admin /admin/index.html 200!
+/admin/ /admin/index.html 200!
+/admin/* /admin/:splat 200!
 
 # Netlify Functions
 /.netlify/functions/* /.netlify/functions/:splat 200
 
-# Prerendered pages — serve static HTML for SEO
+# Prerendered pages
 / /index.html 200
 /listings/ /listings/index.html 200
 /launches/ /launches/index.html 200
@@ -18,5 +18,5 @@ https://www.sgindustrialproperties.com/* https://sgindustrialproperties.com/:spl
 /team/ /team/index.html 200
 /blog/ /blog/index.html 200
 
-# SPA fallback for any unmatched routes
+# SPA fallback (last — only matches if nothing above matched)
 /* /index.html 200

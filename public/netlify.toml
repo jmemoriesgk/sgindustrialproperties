@@ -8,16 +8,19 @@
   from = "/admin"
   to = "/admin/index.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/admin/"
   to = "/admin/index.html"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/admin/*"
   to = "/admin/:splat"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/.netlify/functions/*"
@@ -45,6 +48,12 @@
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
     Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    Cache-Control = "public, max-age=0, must-revalidate, no-cache"
 
 [[headers]]
   for = "/*.js"
