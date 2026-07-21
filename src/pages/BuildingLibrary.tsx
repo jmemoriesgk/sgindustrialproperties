@@ -22,7 +22,7 @@ function Hero() {
         style={{ background: 'linear-gradient(to top, rgba(23,23,28,0.95) 0%, rgba(23,23,28,0.6) 50%, transparent 100%)' }}
       />
       <div className="relative z-10 w-full max-w-[1128px] mx-auto px-6 pb-12">
-        <span className="inline-block font-sans text-xs font-semibold px-4 py-1.5 rounded-full mb-4" style={{ backgroundColor: '#4A3E3D', color: '#1C1A17' }}>
+        <span className="inline-block font-sans text-xs font-semibold px-4 py-1.5 rounded-full mb-4" style={{ backgroundColor: '#4A3E3D', color: '#FFFFFF' }}>
           37 INDUSTRIAL BUILDINGS
         </span>
         <h1 className="font-serif text-white font-semibold mb-4" style={{ fontSize: 'clamp(32px, 5vw, 64px)', letterSpacing: '-1px', lineHeight: 1.1 }}>
@@ -76,7 +76,7 @@ function BuildingCard({ building, index }: { building: typeof industrialBuilding
           </h2>
           
           {/* Type */}
-          <p className="font-sans text-sm mb-3" style={{ color: '#6B6560' }}>
+          <p className="font-sans text-sm mb-3" style={{ color: '#1C1A17' }}>
             {building.type}
           </p>
           
@@ -84,18 +84,18 @@ function BuildingCard({ building, index }: { building: typeof industrialBuilding
           <div className="grid grid-cols-2 gap-2 mb-4">
             <div className="flex items-center gap-2">
               <Calendar size={12} style={{ color: '#4A3E3D' }} />
-              <span className="font-sans text-xs" style={{ color: '#4A4540' }}>{building.tenure}</span>
+              <span className="font-sans text-xs" style={{ color: '#1C1A17' }}>{building.tenure}</span>
             </div>
             <div className="flex items-center gap-2">
               <Building2 size={12} style={{ color: '#4A3E3D' }} />
-              <span className="font-sans text-xs" style={{ color: '#4A4540' }}>{building.storeys} storeys</span>
+              <span className="font-sans text-xs" style={{ color: '#1C1A17' }}>{building.storeys} storeys</span>
             </div>
           </div>
           
           {/* Ramp up */}
           <div className="flex items-center gap-2 mb-4 p-2 rounded-lg" style={{ backgroundColor: '#F7F5F0' }}>
             <MapPin size={12} style={{ color: '#6390B5' }} />
-            <span className="font-sans text-xs" style={{ color: '#4A4540' }}>Ramp up: {building.rampUp}</span>
+            <span className="font-sans text-xs" style={{ color: '#1C1A17' }}>Ramp up: {building.rampUp}</span>
           </div>
           
           {/* Read more */}
@@ -188,7 +188,7 @@ export default function BuildingLibrary() {
             
             {/* Type filter */}
             <div className="flex items-center gap-2">
-              <Filter size={16} style={{ color: '#6B6560' }} />
+              <Filter size={16} style={{ color: '#1C1A17' }} />
               <select
                 value={selectedType}
                 onChange={(e) => setSelectedType(e.target.value)}
@@ -217,7 +217,7 @@ export default function BuildingLibrary() {
           </div>
           
           {/* Results count */}
-          <p className="font-sans text-sm mt-4" style={{ color: '#6B6560' }}>
+          <p className="font-sans text-sm mt-4" style={{ color: '#1C1A17' }}>
             Showing {filteredBuildings.length} of {industrialBuildings.length} buildings
           </p>
         </div>
@@ -234,7 +234,7 @@ export default function BuildingLibrary() {
             </div>
           ) : (
             <div className="text-center py-20">
-              <p className="font-sans text-lg" style={{ color: '#6B6560' }}>
+              <p className="font-sans text-lg" style={{ color: '#1C1A17' }}>
                 No buildings match your filters. Try adjusting your search.
               </p>
             </div>
@@ -248,10 +248,10 @@ export default function BuildingLibrary() {
           <h2 className="font-serif text-2xl font-medium mb-4" style={{ color: '#1C1A17' }}>
             Singapore Industrial Property Database
           </h2>
-          <p className="font-sans text-base leading-relaxed mb-4" style={{ color: '#4A4540' }}>
+          <p className="font-sans text-base leading-relaxed mb-4" style={{ color: '#1C1A17' }}>
             <strong>SG Industrial Properties & SG Industrial Group</strong> maintains Singapore's most comprehensive industrial building library with {industrialBuildings.length} properties across all major industrial districts. Our portfolio includes B1 light industrial units, B2 heavy industrial factories, flatted factories, ramp-up factories, terrace factories, food factories, and warehouses.
           </p>
-          <p className="font-sans text-base leading-relaxed" style={{ color: '#4A4540' }}>
+          <p className="font-sans text-base leading-relaxed" style={{ color: '#1C1A17' }}>
             Whether you are looking for industrial property <strong>for sale</strong> or <strong>for rent</strong> in Woodlands, Jurong, Kaki Bukit, Tampines, Yishun, Sembawang, or any other Singapore district, our building library helps you find the perfect match. All properties come with <strong>No ABSD</strong>. Contact James Goh (R002565A) at +65 9768 7722 for enquiries.
           </p>
         </div>

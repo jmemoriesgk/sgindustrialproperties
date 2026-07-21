@@ -91,9 +91,9 @@ function TeamLeader() {
           <div className="order-2 lg:order-1">
             <p className="mono-label mb-3" style={{ color: '#4A3E3D' }}>TEAM LEADER</p>
             <h2 className="font-serif text-4xl lg:text-5xl font-medium mb-2" style={{ color: '#1C1A17' }}>{m.name}</h2>
-            <p className="font-mono text-sm mb-4" style={{ color: '#6B6560' }}>CEA Registration No: {m.cea}</p>
+            <p className="font-mono text-sm mb-4" style={{ color: '#1C1A17' }}>CEA Registration No: {m.cea}</p>
             <p className="font-sans text-lg font-medium mb-4" style={{ color: '#4A3E3D' }}>{m.role}</p>
-            <p className="font-sans text-base leading-relaxed mb-6" style={{ color: '#4A4540' }}>{m.bio}</p>
+            <p className="font-sans text-base leading-relaxed mb-6" style={{ color: '#1C1A17' }}>{m.bio}</p>
             <div className="flex flex-wrap gap-4">
               <a href={`tel:${m.phone.replace(/\s/g, '')}`} className="btn-primary flex items-center gap-2"><Phone size={16} /> {m.phone}</a>
               <a
@@ -101,7 +101,7 @@ function TeamLeader() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary flex items-center gap-2"
-                style={{ backgroundColor: '#4A3E3D', color: '#FFFFFF' }}
+                style={{ backgroundColor: '#4A3E3D', color: '#1C1A17' }}
               >
                 Submit Enquiry Form
               </a>
@@ -113,7 +113,7 @@ function TeamLeader() {
                 <img
                   src={m.image}
                   alt={`${m.name} CEA ${m.cea} Team Leader Property Consultant Singapore SG Industrial Properties`}
-                  className="w-full aspect-square object-cover"
+                  className="w-full aspect-square object-contain bg-[#F7F5F0]"
                   loading="eager"
                 />
               </div>
@@ -145,7 +145,7 @@ function AgentsGrid() {
         <div className="text-center mb-12">
           <p className="mono-label mb-3">INDUSTRIAL SPECIALISTS</p>
           <h2 className="section-heading">Our CEA Registered Agents</h2>
-          <p className="font-sans text-base mt-4 mx-auto" style={{ color: '#4A4540', maxWidth: 600 }}>
+          <p className="font-sans text-base mt-4 mx-auto" style={{ color: '#1C1A17', maxWidth: 600 }}>
             Each industrial specialist is fully licensed by the Council for Estate Agencies (CEA) and focuses exclusively on Singapore industrial and commercial property transactions.
           </p>
         </div>
@@ -158,19 +158,31 @@ function AgentsGrid() {
               className="agent-card text-center group block"
               id={`agent-${m.name.toLowerCase().replace(/\s+/g, '-')}`}
             >
-              <div className="relative mx-auto mb-4 overflow-hidden rounded-xl" style={{ width: '100%', aspectRatio: '3/4', backgroundColor: '#F7F5F0' }}>
+              <div className="relative mx-auto mb-4 overflow-hidden rounded-xl" style={{ width: '100%', aspectRatio: '3/4', backgroundColor: '#F7F5F0', border: '1px solid #E8E4DC' }}>
                 <img
                   src={m.image}
                   alt={`${m.name} CEA ${m.cea} Property Consultant Singapore Industrial Commercial Real Estate SG Industrial Properties`}
-                  className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-contain object-top transition-transform duration-300 group-hover:scale-105 bg-[#F7F5F0]"
                   loading="lazy"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fallback = target.parentElement?.querySelector('.img-fallback') as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
                 />
+                <div
+                  className="img-fallback hidden absolute inset-0 flex-col items-center justify-center"
+                  style={{ backgroundColor: '#1C1A17', color: '#FFFFFF' }}
+                >
+                  <span className="font-mono text-sm">img</span>
+                </div>
               </div>
               <h3 className="font-sans text-base font-semibold" style={{ color: '#1C1A17' }}>{m.name}</h3>
               {m.cea && (
                 <p className="font-mono text-xs mt-1" style={{ color: '#4A3E3D' }}>CEA {m.cea}</p>
               )}
-              <p className="font-sans text-xs mt-1" style={{ color: '#6B6560' }}>{m.role}</p>
+              <p className="font-sans text-xs mt-1" style={{ color: '#1C1A17' }}>{m.role}</p>
             </Link>
           ))}
         </div>
@@ -187,10 +199,10 @@ function CEAInfo() {
         <h2 className="font-serif text-3xl font-medium mb-6" style={{ color: '#1C1A17' }}>
           What is CEA Registration?
         </h2>
-        <p className="font-sans text-base leading-relaxed mb-6" style={{ color: '#4A4540' }}>
+        <p className="font-sans text-base leading-relaxed mb-6" style={{ color: '#1C1A17' }}>
           The Council for Estate Agencies (CEA) is the statutory board that regulates Singapore's real estate agency industry. All property agents must be registered with CEA and hold a valid registration number (e.g., R0XXXXXA) before they can conduct estate agency work. This ensures professionalism, accountability, and consumer protection.
         </p>
-        <p className="font-sans text-base leading-relaxed mb-8" style={{ color: '#4A4540' }}>
+        <p className="font-sans text-base leading-relaxed mb-8" style={{ color: '#1C1A17' }}>
           You can verify any agent's registration status on the <a href="https://www.cea.gov.sg" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: '#4A3E3D' }}>CEA Public Register</a> using their CEA registration number. Every agent listed on this page is a fully registered property agent with SG Industrial Properties.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">

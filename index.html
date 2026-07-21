@@ -51,10 +51,18 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Preload critical hero images -->
+    <link rel="preload" as="image" href="/images/gate-plus-hero.jpg" type="image/jpeg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/ct-gold-hero.jpg" type="image/jpeg" fetchpriority="high" />
+    <!-- Preload critical fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif:wght@400;500;600;700&display=swap" /></noscript>
     
     <!-- Structured Data: RealEstateAgent / Organization -->
     <script type="application/ld+json">

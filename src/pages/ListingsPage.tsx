@@ -75,7 +75,7 @@ export default function ListingsPage() {
   const statusBadge = (status: string) => {
     const styles: Record<string, { bg: string; text: string; label: string }> = {
       available: { bg: '#E8F5E9', text: '#2E7D32', label: 'For Sale' },
-      sold: { bg: '#F5F5F5', text: '#6B6560', label: 'Not Available (Sold)' },
+      sold: { bg: '#F5F5F5', text: '#FFFFFF', label: 'Not Available (Sold)' },
       rented: { bg: '#E3F2FD', text: '#1565C0', label: 'Not Available (Rented)' },
       withdrawn: { bg: '#FFF3E0', text: '#E65100', label: 'Withdrawn' },
     }
@@ -108,13 +108,13 @@ export default function ListingsPage() {
           <h1 className="font-serif text-4xl lg:text-5xl font-semibold mb-4" style={{ color: '#1C1A17', letterSpacing: '-1px' }}>
             Industrial Properties For Sale
           </h1>
-          <p className="font-sans text-lg mb-8" style={{ color: '#6B6560', maxWidth: 600 }}>
+          <p className="font-sans text-lg mb-8" style={{ color: '#1C1A17', maxWidth: 600 }}>
             Discover B1 industrial units, B2 factories, warehouses, and food hubs across Singapore. All industrial properties come with No ABSD.
           </p>
 
           {/* Search Bar */}
           <div className="relative max-w-[600px]">
-            <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2" style={{ color: '#6B6560' }} />
+            <Search size={20} className="absolute left-4 top-1/2 -translate-y-1/2" style={{ color: '#1C1A17' }} />
             <input
               type="text"
               placeholder="Search by name, address, district, type, or features..."
@@ -132,7 +132,7 @@ export default function ListingsPage() {
         <div className="max-w-[1128px] mx-auto px-6">
           {/* Filter Bar */}
           <div className="flex flex-wrap items-center gap-3 mb-8">
-            <Filter size={18} style={{ color: '#6B6560' }} />
+            <Filter size={18} style={{ color: '#1C1A17' }} />
             <select value={selectedDistrict} onChange={e => { setSelectedDistrict(e.target.value); setCurrentPage(1) }} className="font-sans text-sm px-4 py-2.5 rounded-lg border" style={{ borderColor: '#E8E4DC', backgroundColor: '#fff', color: '#1C1A17' }}>
               <option value="">All Districts</option>
               {districts.map(d => <option key={d} value={d}>{d}</option>)}
@@ -156,15 +156,15 @@ export default function ListingsPage() {
               <option value="size-large">Size: Large to Small</option>
             </select>
             {(searchQuery || selectedDistrict || selectedType || selectedStatus) && (
-              <button onClick={clearFilters} className="font-sans text-sm px-4 py-2.5 rounded-lg border" style={{ borderColor: '#E8E4DC', color: '#6B6560' }}>Clear Filters</button>
+              <button onClick={clearFilters} className="font-sans text-sm px-4 py-2.5 rounded-lg border" style={{ borderColor: '#E8E4DC', color: '#1C1A17' }}>Clear Filters</button>
             )}
-            <span className="font-sans text-sm ml-auto" style={{ color: '#6B6560' }}>{filtered.length} listing{filtered.length !== 1 ? 's' : ''}</span>
+            <span className="font-sans text-sm ml-auto" style={{ color: '#1C1A17' }}>{filtered.length} listing{filtered.length !== 1 ? 's' : ''}</span>
           </div>
 
           {/* Listing Cards */}
           {paginated.length === 0 ? (
             <div className="text-center py-16">
-              <p className="font-sans text-lg mb-4" style={{ color: '#6B6560' }}>No listings match your criteria.</p>
+              <p className="font-sans text-lg mb-4" style={{ color: '#1C1A17' }}>No listings match your criteria.</p>
               <button onClick={clearFilters} className="btn-primary">Clear Filters</button>
             </div>
           ) : (
@@ -178,16 +178,16 @@ export default function ListingsPage() {
                   <div className="p-5">
                     <p className="font-mono text-xs uppercase mb-2" style={{ color: '#4A3E3D', letterSpacing: '1.5px' }}>{listing.type}</p>
                     <h3 className="font-serif text-lg font-medium mb-2" style={{ color: '#1C1A17' }}>{listing.name}</h3>
-                    <p className="font-sans text-sm mb-3 flex items-center gap-1" style={{ color: '#6B6560' }}>
+                    <p className="font-sans text-sm mb-3 flex items-center gap-1" style={{ color: '#1C1A17' }}>
                       <MapPin size={14} /> {listing.address}, {listing.districtCode}
                     </p>
                     <div className="flex items-center gap-4 mb-4">
                       <span className="font-sans text-xl font-semibold" style={{ color: '#1C1A17' }}>{listing.priceDisplay}</span>
-                      <span className="font-sans text-sm" style={{ color: '#6B6560' }}>{listing.sizeDisplay}</span>
+                      <span className="font-sans text-sm" style={{ color: '#1C1A17' }}>{listing.sizeDisplay}</span>
                     </div>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {listing.features.slice(0, 3).map((f, i) => (
-                        <span key={i} className="font-sans text-xs px-2 py-1 rounded" style={{ backgroundColor: '#F7F5F0', color: '#4A4540' }}>{f}</span>
+                        <span key={i} className="font-sans text-xs px-2 py-1 rounded" style={{ backgroundColor: '#F7F5F0', color: '#1C1A17' }}>{f}</span>
                       ))}
                     </div>
                     <div className="flex items-center justify-between pt-3" style={{ borderTop: '1px solid #E8E4DC' }}>

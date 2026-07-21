@@ -29,7 +29,7 @@ function BlogHero() {
       <div className="relative z-10 w-full max-w-[1128px] mx-auto px-6 pb-12">
         <span
           className="inline-block font-sans text-xs font-semibold px-4 py-1.5 rounded-full mb-4"
-          style={{ backgroundColor: '#4A3E3D', color: '#1C1A17' }}
+          style={{ backgroundColor: '#4A3E3D', color: '#FFFFFF' }}
         >
           INDUSTRIAL PROPERTY INSIGHTS
         </span>
@@ -39,7 +39,7 @@ function BlogHero() {
         >
           SG Industrial Blog
         </h1>
-        <p className="font-sans text-base max-w-[600px]" style={{ color: 'rgba(255,255,255,0.75)' }}>
+        <p className="font-sans text-base max-w-[600px]" style={{ color: 'rgba(255,255,255,0.8)' }}>
           Expert insights on Singapore industrial property — new launches, investment guides,
           No ABSD strategies, B1 & B2 factory tips, and market trends from James Goh R002565A
           and the SG Industrial Properties & SG Industrial Group team.
@@ -113,21 +113,21 @@ function BlogCard({ post, index }: { post: ReturnType<typeof getPublishedPosts>[
           </h2>
 
           {/* Excerpt */}
-          <p className="font-sans text-sm leading-relaxed mb-4 line-clamp-3" style={{ color: '#6B6560' }}>
+          <p className="font-sans text-sm leading-relaxed mb-4 line-clamp-3" style={{ color: '#1C1A17' }}>
             {post.excerpt}
           </p>
 
           {/* Meta */}
           <div className="flex items-center gap-4 pt-4" style={{ borderTop: '1px solid #F7F5F0' }}>
             <div className="flex items-center gap-1.5">
-              <Calendar size={12} style={{ color: '#6B6560' }} />
-              <span className="font-mono text-[10px]" style={{ color: '#6B6560' }}>
+              <Calendar size={12} style={{ color: '#1C1A17' }} />
+              <span className="font-mono text-[10px]" style={{ color: '#1C1A17' }}>
                 {formatDate(post.publishDate)}
               </span>
             </div>
             <div className="flex items-center gap-1.5">
-              <Clock size={12} style={{ color: '#6B6560' }} />
-              <span className="font-mono text-[10px]" style={{ color: '#6B6560' }}>
+              <Clock size={12} style={{ color: '#1C1A17' }} />
+              <span className="font-mono text-[10px]" style={{ color: '#1C1A17' }}>
                 {readTime} min read
               </span>
             </div>
@@ -155,7 +155,7 @@ function TagFilter({ activeTag, onTagChange }: { activeTag: string; onTagChange:
         className="font-sans text-sm font-medium px-4 py-2 rounded-full transition-all"
         style={{
           backgroundColor: activeTag === 'All' ? '#4A3E3D' : '#F7F5F0',
-          color: activeTag === 'All' ? '#1C1A17' : '#6B6560',
+          color: activeTag === 'All' ? '#FFFFFF' : '#1C1A17',
         }}
       >
         All Topics
@@ -167,7 +167,7 @@ function TagFilter({ activeTag, onTagChange }: { activeTag: string; onTagChange:
           className="font-sans text-sm font-medium px-4 py-2 rounded-full transition-all"
           style={{
             backgroundColor: activeTag === tag ? '#4A3E3D' : '#F7F5F0',
-            color: activeTag === tag ? '#1C1A17' : '#6B6560',
+            color: activeTag === tag ? '#FFFFFF' : '#1C1A17',
           }}
         >
           {tag}
@@ -247,7 +247,7 @@ export default function Blog() {
             </div>
           ) : (
             <div className="text-center py-20">
-              <p className="font-sans text-lg" style={{ color: '#6B6560' }}>
+              <p className="font-sans text-lg" style={{ color: '#1C1A17' }}>
                 No articles found for this topic yet. Check back soon for new content.
               </p>
             </div>
@@ -258,7 +258,7 @@ export default function Blog() {
             <h2 className="font-serif text-2xl font-medium mb-4" style={{ color: '#1C1A17' }}>
               Singapore Industrial Property Resources
             </h2>
-            <p className="font-sans text-base leading-relaxed" style={{ color: '#4A4540' }}>
+            <p className="font-sans text-base leading-relaxed" style={{ color: '#1C1A17' }}>
               Welcome to the <strong>SG Industrial Properties & SG Industrial Group</strong> blog — your definitive resource for 
               <strong> Singapore industrial property </strong>information. Our articles cover everything from 
               <strong> industrial new launch </strong>announcements for projects like 

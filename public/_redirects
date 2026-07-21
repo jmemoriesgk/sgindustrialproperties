@@ -2,8 +2,12 @@
 https://www.sgindustrialproperties.com/* https://sgindustrialproperties.com/:splat 301!
 
 # Admin panel — serve static files (NOT SPA)
+/admin /admin/index.html 200
 /admin/ /admin/index.html 200
 /admin/* /admin/:splat 200
+
+# Netlify Functions
+/.netlify/functions/* /.netlify/functions/:splat 200
 
 # Prerendered pages — serve static HTML for SEO
 / /index.html 200

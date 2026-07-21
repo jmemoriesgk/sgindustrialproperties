@@ -7,12 +7,12 @@
     /* HNWI Luxury Palette */
     --primary-dark: #1C1A17;
     --primary-accent: #4A3E3D;
-    --secondary-accent: #6B6560;
+    --secondary-accent: #FFFFFF;
     --tertiary-accent: #8A827A;
     --light-linen: #F7F5F0;
     --warm-white: #FDFBF7;
     --dark-grey: #1C1A17;
-    --mid-grey: #6B6560;
+    --mid-grey: #FFFFFF;
     --light-grey: #D5D0C8;
     --card-border: #E8E4DC;
 
@@ -145,6 +145,31 @@
   .btn-outline:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Dark variant for use on light backgrounds */
+  .btn-outline-dark {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 32px;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #1C1A17;
+    border: 1px solid rgba(28, 26, 23, 0.3);
+    transition: all 200ms ease;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .btn-outline-dark:hover {
+    background-color: rgba(28, 26, 23, 0.05);
+    border-color: rgba(28, 26, 23, 0.5);
+  }
+
+  /* Safety nets - ensure content is always visible */
+  .related-post-card {
+    opacity: 1 !important;
   }
 
   .glass-card {

@@ -39,7 +39,7 @@ function AboutHero() {
         <h1 className="font-serif text-4xl lg:text-5xl font-medium mb-6" style={{ color: '#1C1A17', letterSpacing: '-1px' }}>
           Creating Wealth Through Singapore Industrial Property Investments
         </h1>
-        <p className="font-sans text-lg leading-relaxed" style={{ color: '#4A4540' }}>
+        <p className="font-sans text-lg leading-relaxed" style={{ color: '#1C1A17' }}>
           SG Industrial Properties is a leading industrial property consultancy in Singapore, specializing in B1 and B2 industrial spaces, warehouses, and business parks. With over 15 years of experience, we've facilitated more than S$500 million in transactions for over 1,000 corporate clients.
         </p>
       </div>
@@ -57,7 +57,7 @@ function CompanyStory() {
             <img
               src="/images/singapore-skyline.jpg"
               alt="Singapore industrial district skyline at dusk"
-              className="w-full h-80 lg:h-96 object-cover"
+              className="w-full h-80 lg:h-96 object-contain"
               loading="lazy"
             />
           </div>
@@ -66,7 +66,7 @@ function CompanyStory() {
             <h2 className="font-serif text-3xl lg:text-4xl font-medium mb-4" style={{ color: '#1C1A17' }}>
               15 Years of Industrial Property Excellence
             </h2>
-            <div className="font-sans text-base leading-relaxed space-y-4" style={{ color: '#4A4540' }}>
+            <div className="font-sans text-base leading-relaxed space-y-4" style={{ color: '#1C1A17' }}>
               <p>
                 Founded in 2009, SG Industrial Properties began with a simple mission: to help businesses find the perfect industrial space in Singapore. What started as a small consultancy has grown into one of Singapore's most trusted industrial property platforms.
               </p>
@@ -135,7 +135,7 @@ function WhyChooseUs() {
                 <v.icon size={24} color={v.color} />
               </div>
               <h3 className="font-serif text-2xl font-medium mb-3" style={{ color: '#1C1A17' }}>{v.title}</h3>
-              <p className="font-sans text-sm leading-relaxed" style={{ color: '#4A4540' }}>{v.body}</p>
+              <p className="font-sans text-sm leading-relaxed" style={{ color: '#1C1A17' }}>{v.body}</p>
             </div>
           ))}
         </div>
@@ -174,7 +174,7 @@ function TeamSection() {
         <div className="text-center mb-12">
           <p className="mono-label mb-3">OUR TEAM</p>
           <h2 className="section-heading">Meet Our Property Experts</h2>
-          <p className="font-sans text-base mt-4 mx-auto" style={{ color: '#4A4540', maxWidth: 600 }}>
+          <p className="font-sans text-base mt-4 mx-auto" style={{ color: '#1C1A17', maxWidth: 600 }}>
             A dedicated team of 20 CEA registered industrial specialists led by James Goh (R002565A). Every specialist is fully licensed and focuses exclusively on Singapore industrial and commercial real estate.
           </p>
         </div>
@@ -186,13 +186,13 @@ function TeamSection() {
                 <img
                   src={m.image}
                   alt={`${m.name} CEA ${m.cea} ${m.role} Singapore Industrial Property SG Industrial Properties`}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105 bg-[#F7F5F0]"
                   loading="lazy"
                 />
               </div>
               <h3 className="font-sans text-base font-semibold" style={{ color: '#1C1A17' }}>{m.name}</h3>
               <p className="font-mono text-xs mt-0.5" style={{ color: '#4A3E3D' }}>CEA {m.cea}</p>
-              <p className="font-sans text-xs mt-0.5" style={{ color: '#6B6560' }}>{m.role}</p>
+              <p className="font-sans text-xs mt-0.5" style={{ color: '#1C1A17' }}>{m.role}</p>
             </Link>
           ))}
         </div>
@@ -218,7 +218,7 @@ function SEOContent() {
         <h2 className="font-serif text-3xl font-medium mb-6" style={{ color: '#1C1A17' }}>
           Investing in Singapore Industrial Property: A Complete Guide
         </h2>
-        <div className="font-sans text-base leading-relaxed space-y-4" style={{ color: '#4A4540' }}>
+        <div className="font-sans text-base leading-relaxed space-y-4" style={{ color: '#1C1A17' }}>
           <p>
             Singapore's industrial property market offers compelling investment opportunities for both local and foreign investors. With the government's commitment to maintaining Singapore's position as a global logistics and manufacturing hub, demand for quality industrial spaces continues to grow across key districts including Tuas, Jurong, Woodlands, Changi, and Paya Lebar.
           </p>

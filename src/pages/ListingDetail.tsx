@@ -17,7 +17,7 @@ export default function ListingDetail() {
       <div className="min-h-[60vh] flex items-center justify-center" style={{ backgroundColor: '#F7F5F0' }}>
         <div className="text-center">
           <h2 className="font-serif text-2xl font-medium mb-4" style={{ color: '#1C1A17' }}>Listing Not Found</h2>
-          <p className="font-sans text-base mb-6" style={{ color: '#6B6560' }}>The property listing you are looking for does not exist.</p>
+          <p className="font-sans text-base mb-6" style={{ color: '#1C1A17' }}>The property listing you are looking for does not exist.</p>
           <Link to="/listings" className="btn-primary">Browse All Listings</Link>
         </div>
       </div>
@@ -59,7 +59,7 @@ export default function ListingDetail() {
       {/* Breadcrumbs */}
       <div style={{ backgroundColor: '#F7F5F0', borderBottom: '1px solid #E8E4DC' }}>
         <div className="max-w-[1128px] mx-auto px-6 py-3">
-          <nav className="flex items-center gap-2 font-sans text-sm" style={{ color: '#6B6560' }}>
+          <nav className="flex items-center gap-2 font-sans text-sm" style={{ color: '#1C1A17' }}>
             <Link to="/" style={{ color: '#4A3E3D' }}>Home</Link>
             <span>/</span>
             <Link to="/listings" style={{ color: '#4A3E3D' }}>Listings</Link>
@@ -77,7 +77,7 @@ export default function ListingDetail() {
             <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(28,26,23,0.9) 0%, transparent 50%)' }} />
             <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-10">
               <div className="max-w-[1128px] mx-auto">
-                <span className="font-sans text-xs font-semibold px-3 py-1 rounded-full mb-3 inline-block" style={{ backgroundColor: isAvailable ? '#4A3E3D' : '#6B6560', color: '#fff' }}>
+                <span className="font-sans text-xs font-semibold px-3 py-1 rounded-full mb-3 inline-block" style={{ backgroundColor: isAvailable ? '#4A3E3D' : '#FFFFFF', color: '#fff' }}>
                   {listing.status === 'available' ? 'FOR SALE' : listing.status === 'sold' ? 'NOT AVAILABLE (SOLD)' : listing.status === 'rented' ? 'NOT AVAILABLE (RENTED)' : listing.status.toUpperCase()}
                 </span>
                 <h1 className="font-serif text-3xl lg:text-4xl font-semibold text-white mb-2">{listing.name}</h1>
@@ -99,22 +99,22 @@ export default function ListingDetail() {
               {/* Price & Key Stats */}
               <div className="flex flex-wrap items-end gap-6 mb-8 pb-8" style={{ borderBottom: '1px solid #E8E4DC' }}>
                 <div>
-                  <p className="font-mono text-xs uppercase mb-1" style={{ color: '#6B6560', letterSpacing: '2px' }}>Asking Price</p>
+                  <p className="font-mono text-xs uppercase mb-1" style={{ color: '#4A3E3D', letterSpacing: '2px' }}>Asking Price</p>
                   <p className="font-serif text-3xl font-semibold" style={{ color: '#1C1A17' }}>{listing.priceDisplay}</p>
                 </div>
                 <div>
-                  <p className="font-mono text-xs uppercase mb-1" style={{ color: '#6B6560', letterSpacing: '2px' }}>Floor Area</p>
+                  <p className="font-mono text-xs uppercase mb-1" style={{ color: '#4A3E3D', letterSpacing: '2px' }}>Floor Area</p>
                   <p className="font-sans text-xl font-medium" style={{ color: '#1C1A17' }}>{listing.sizeDisplay}</p>
                 </div>
                 <div>
-                  <p className="font-mono text-xs uppercase mb-1" style={{ color: '#6B6560', letterSpacing: '2px' }}>PSF</p>
+                  <p className="font-mono text-xs uppercase mb-1" style={{ color: '#4A3E3D', letterSpacing: '2px' }}>PSF</p>
                   <p className="font-sans text-xl font-medium" style={{ color: '#1C1A17' }}>S${Math.round(listing.price / listing.size).toLocaleString()}</p>
                 </div>
               </div>
 
               {/* Description */}
               <h2 className="font-serif text-2xl font-medium mb-4" style={{ color: '#1C1A17' }}>Property Overview</h2>
-              <p className="font-sans text-base leading-relaxed mb-8" style={{ color: '#4A4540' }}>{listing.description}</p>
+              <p className="font-sans text-base leading-relaxed mb-8" style={{ color: '#1C1A17' }}>{listing.description}</p>
 
               {/* Specifications Grid */}
               <h3 className="font-serif text-xl font-medium mb-4" style={{ color: '#1C1A17' }}>Specifications</h3>
@@ -129,7 +129,7 @@ export default function ListingDetail() {
                 ].map((spec, i) => (
                   <div key={i} className="p-4 rounded-xl" style={{ backgroundColor: '#F7F5F0' }}>
                     <spec.icon size={18} style={{ color: '#4A3E3D' }} className="mb-2" />
-                    <p className="font-sans text-xs" style={{ color: '#6B6560' }}>{spec.label}</p>
+                    <p className="font-sans text-xs" style={{ color: '#4A3E3D' }}>{spec.label}</p>
                     <p className="font-sans text-sm font-medium" style={{ color: '#1C1A17' }}>{spec.value}</p>
                   </div>
                 ))}
@@ -141,7 +141,7 @@ export default function ListingDetail() {
                 {listing.features.map((f, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <CheckCircle size={16} style={{ color: '#4A3E3D' }} />
-                    <span className="font-sans text-sm" style={{ color: '#4A4540' }}>{f}</span>
+                    <span className="font-sans text-sm" style={{ color: '#1C1A17' }}>{f}</span>
                   </div>
                 ))}
               </div>
@@ -151,11 +151,11 @@ export default function ListingDetail() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <div>
                   <p className="font-sans text-sm font-medium mb-2" style={{ color: '#1C1A17' }}>Nearby MRT</p>
-                  {listing.nearbyMRT.map((m, i) => <p key={i} className="font-sans text-sm" style={{ color: '#6B6560' }}>{m}</p>)}
+                  {listing.nearbyMRT.map((m, i) => <p key={i} className="font-sans text-sm" style={{ color: '#1C1A17' }}>{m}</p>)}
                 </div>
                 <div>
                   <p className="font-sans text-sm font-medium mb-2" style={{ color: '#1C1A17' }}>Expressway Access</p>
-                  {listing.nearbyExpressway.map((e, i) => <p key={i} className="font-sans text-sm" style={{ color: '#6B6560' }}>{e}</p>)}
+                  {listing.nearbyExpressway.map((e, i) => <p key={i} className="font-sans text-sm" style={{ color: '#1C1A17' }}>{e}</p>)}
                 </div>
               </div>
             </div>

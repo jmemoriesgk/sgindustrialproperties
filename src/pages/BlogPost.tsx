@@ -47,10 +47,12 @@ export default function BlogPost() {
   useEffect(() => {
     if (!relatedRef.current || relatedPosts.length === 0) return
     const ctx = gsap.context(() => {
-      gsap.from('.related-post-card', {
-        opacity: 0, y: 40, duration: 0.6, stagger: 0.1, ease: 'power3.out',
-        scrollTrigger: { trigger: relatedRef.current!, start: 'top 85%' },
-      })
+      gsap.fromTo('.related-post-card',
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: { trigger: relatedRef.current!, start: 'top 85%' },
+        }
+      )
     }, relatedRef.current)
     return () => ctx.revert()
   }, [slug, relatedPosts.length])
@@ -140,7 +142,7 @@ export default function BlogPost() {
           <Link
             to="/blog"
             className="inline-flex items-center gap-1 font-sans text-sm mb-4 transition-colors hover:text-[#4A3E3D]"
-            style={{ color: 'rgba(255,255,255,0.7)' }}
+            style={{ color: 'rgba(255,255,255,0.8)' }}
           >
             <ArrowLeft size={14} /> Back to Blog
           </Link>
@@ -152,7 +154,7 @@ export default function BlogPost() {
                 key={tag}
                 to={`/blog?tag=${encodeURIComponent(tag)}`}
                 className="font-sans text-[10px] font-semibold px-3 py-1 rounded-full transition-colors hover:opacity-80"
-                style={{ backgroundColor: '#4A3E3D', color: '#1C1A17' }}
+                style={{ backgroundColor: 'rgba(255,255,255,0.2)', color: '#FFFFFF' }}
               >
                 {tag}
               </Link>
@@ -170,20 +172,20 @@ export default function BlogPost() {
           {/* Meta */}
           <div className="flex flex-wrap items-center gap-4">
             <div className="flex items-center gap-2">
-              <User size={14} style={{ color: '#4A3E3D' }} />
-              <span className="font-sans text-sm" style={{ color: '#4A3E3D' }}>
+              <User size={14} style={{ color: 'rgba(255,255,255,0.7)' }} />
+              <span className="font-sans text-sm" style={{ color: 'rgba(255,255,255,0.8)' }}>
                 {post.author}{post.authorCEA ? ` (${post.authorCEA})` : ''}
               </span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar size={14} style={{ color: 'rgba(255,255,255,0.6)' }} />
-              <span className="font-sans text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
+              <span className="font-sans text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 {formatDate(post.publishDate)}
               </span>
             </div>
             <div className="flex items-center gap-2">
               <Clock size={14} style={{ color: 'rgba(255,255,255,0.6)' }} />
-              <span className="font-sans text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
+              <span className="font-sans text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
                 {readTime} min read
               </span>
             </div>
@@ -208,7 +210,7 @@ export default function BlogPost() {
             <h3 className="font-serif text-xl text-white font-medium mb-3">
               Interested in This Property?
             </h3>
-            <p className="font-sans text-sm mb-6" style={{ color: 'rgba(255,255,255,0.7)' }}>
+            <p className="font-sans text-sm mb-6" style={{ color: 'rgba(255,255,255,0.8)' }}>
               Contact SG Industrial Properties & SG Industrial Group for a free consultation.
               Our 21 CEA registered specialists are ready to help.
             </p>
@@ -259,7 +261,7 @@ export default function BlogPost() {
                       <h3 className="font-serif text-lg font-medium mb-2 leading-snug" style={{ color: '#1C1A17' }}>
                         {rp.title}
                       </h3>
-                      <div className="flex items-center gap-1 mt-3" style={{ color: '#6B6560' }}>
+                      <div className="flex items-center gap-1 mt-3" style={{ color: '#1C1A17' }}>
                         <span className="font-sans text-xs">Read Article</span>
                         <ArrowRight size={12} />
                       </div>

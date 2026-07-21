@@ -5,7 +5,7 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [inspectAttr(), react()],
   server: {
     port: 3000,
@@ -14,5 +14,19 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    target: 'es2020',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          ui: ['react-helmet-async'],
+          gsap: ['gsap'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 500,
+    sourcemap: false,
   },
 });

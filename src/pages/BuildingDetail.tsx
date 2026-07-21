@@ -145,7 +145,7 @@ export default function BuildingDetail() {
                     <div key={i} className="flex items-start gap-3 p-3 rounded-lg" style={{ backgroundColor: '#F7F5F0' }}>
                       <item.icon size={16} className="mt-0.5 flex-shrink-0" style={{ color: '#4A3E3D' }} />
                       <div>
-                        <p className="font-sans text-xs font-medium mb-0.5" style={{ color: '#6B6560' }}>{item.label}</p>
+                        <p className="font-sans text-xs font-medium mb-0.5" style={{ color: '#1C1A17' }}>{item.label}</p>
                         <p className="font-sans text-sm font-medium" style={{ color: '#1C1A17' }}>{item.value}</p>
                       </div>
                     </div>
@@ -160,8 +160,8 @@ export default function BuildingDetail() {
                   <div className="flex items-start gap-3">
                     <Train size={18} style={{ color: '#6390B5' }} />
                     <div>
-                      <p className="font-sans text-xs font-medium mb-0.5" style={{ color: '#6B6560' }}>Nearest MRT</p>
-                      <p className="font-sans text-sm" style={{ color: '#4A4540' }}>{building.mrt}</p>
+                      <p className="font-sans text-xs font-medium mb-0.5" style={{ color: '#1C1A17' }}>Nearest MRT</p>
+                      <p className="font-sans text-sm" style={{ color: '#1C1A17' }}>{building.mrt}</p>
                     </div>
                   </div>
                 </div>
@@ -172,7 +172,7 @@ export default function BuildingDetail() {
             <div>
               <div className="bg-white rounded-xl p-6 sticky top-24" style={{ border: '1px solid #E8E4DC' }}>
                 <h3 className="font-serif text-lg font-medium mb-4" style={{ color: '#1C1A17' }}>Interested in {building.name}?</h3>
-                <p className="font-sans text-sm mb-6" style={{ color: '#6B6560' }}>
+                <p className="font-sans text-sm mb-6" style={{ color: '#1C1A17' }}>
                   Contact SG Industrial Properties & Group for availability, pricing, and viewing arrangements.
                 </p>
                 <div className="space-y-3">
@@ -181,15 +181,15 @@ export default function BuildingDetail() {
                     href="https://www.privyr.com/form/1U3bZG2k#sg-industrial-enquiry"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-outline w-full text-center block"
+                    className="btn-outline-dark w-full text-center block"
                   >
                     Enquire Online
                   </a>
                 </div>
                 <div className="mt-6 pt-6" style={{ borderTop: '1px solid #F7F5F0' }}>
-                  <p className="font-sans text-xs mb-2" style={{ color: '#6B6560' }}>Managed by</p>
+                  <p className="font-sans text-xs mb-2" style={{ color: '#1C1A17' }}>Managed by</p>
                   <p className="font-sans text-sm font-medium" style={{ color: '#1C1A17' }}>SG Industrial Properties & Group</p>
-                  <p className="font-sans text-xs mt-1" style={{ color: '#6B6560' }}>James Goh (R002565A)</p>
+                  <p className="font-sans text-xs mt-1" style={{ color: '#1C1A17' }}>James Goh (R002565A)</p>
                 </div>
               </div>
             </div>
@@ -218,7 +218,7 @@ export default function BuildingDetail() {
                     </span>
                   </div>
                   <h3 className="font-serif text-lg font-medium mb-1" style={{ color: '#1C1A17' }}>{b.name}</h3>
-                  <p className="font-sans text-xs mb-3" style={{ color: '#6B6560' }}>{b.type}</p>
+                  <p className="font-sans text-xs mb-3" style={{ color: '#1C1A17' }}>{b.type}</p>
                   <div className="flex items-center gap-1" style={{ color: '#4A3E3D' }}>
                     <span className="font-sans text-xs">View Details</span>
                     <ArrowRight size={12} />

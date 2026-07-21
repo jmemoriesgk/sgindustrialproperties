@@ -69,7 +69,7 @@ function HeroSection() {
           </div>
         </div>
 
-        <p className="hero-subtitle font-sans mt-6 mx-auto" style={{ color: '#6B6560', fontSize: 18, maxWidth: 600, lineHeight: 1.6 }}>
+        <p className="hero-subtitle font-sans mt-6 mx-auto" style={{ color: '#1C1A17', fontSize: 18, maxWidth: 600, lineHeight: 1.6 }}>
           Discover premium industrial spaces, B2 factories, warehouses, and business parks across Singapore's key industrial districts.
         </p>
 
@@ -327,7 +327,7 @@ function FeaturedSection() {
         <div className="featured-header text-center mb-12">
           <p className="mono-label mb-3" style={{ color: '#4A3E3D' }}>NEW INDUSTRIAL & COMMERCIAL LAUNCHES</p>
           <h2 className="section-heading">Featured Launches</h2>
-          <p className="font-sans text-base mt-4 mx-auto" style={{ color: '#4A4540', maxWidth: 640 }}>
+          <p className="font-sans text-base mt-4 mx-auto" style={{ color: '#1C1A17', maxWidth: 640 }}>
             Discover Singapore's newest industrial and commercial property launches. From multi-user ramp-up factories to food hubs, heritage-adaptive mixed-use developments, and freehold B1 industrial — register your interest for priority unit selection.
           </p>
         </div>
@@ -361,10 +361,10 @@ function FeaturedSection() {
                 </span>
               </div>
               <div className="p-4">
-                <p className="font-mono text-[10px] uppercase mb-1" style={{ color: '#6B6560' }}>{p.tag}</p>
+                <p className="font-mono text-[10px] uppercase mb-1" style={{ color: '#4A3E3D' }}>{p.tag}</p>
                 <h3 className="font-serif text-lg font-medium mb-0.5" style={{ color: '#1C1A17' }}>{p.name}</h3>
-                <p className="font-sans text-xs mb-2" style={{ color: '#6B6560' }}>{p.location}</p>
-                <p className="font-mono text-[10px]" style={{ color: '#6B6560' }}>{p.specs}</p>
+                <p className="font-sans text-xs mb-2" style={{ color: '#4A3E3D' }}>{p.location}</p>
+                <p className="font-mono text-[10px]" style={{ color: '#4A3E3D' }}>{p.specs}</p>
               </div>
             </Link>
           ))}
@@ -453,7 +453,7 @@ function ServicesSection() {
                   <div className="order-2 lg:order-1">
                     <p className="mono-label mb-3" style={{ color: '#4A3E3D' }}>{s.label}</p>
                     <h3 className="font-serif text-3xl lg:text-4xl font-medium mb-4" style={{ color: '#1C1A17' }}>{s.title}</h3>
-                    <p className="font-sans text-base leading-relaxed mb-6" style={{ color: '#4A4540', maxWidth: 440 }}>{s.body}</p>
+                    <p className="font-sans text-base leading-relaxed mb-6" style={{ color: '#1C1A17', maxWidth: 440 }}>{s.body}</p>
                     <a
                       href="https://www.privyr.com/form/1U3bZG2k#sg-industrial-enquiry"
                       target="_blank"
@@ -475,7 +475,7 @@ function ServicesSection() {
                   <div>
                     <p className="mono-label mb-3" style={{ color: '#4A3E3D' }}>{s.label}</p>
                     <h3 className="font-serif text-3xl lg:text-4xl font-medium mb-4" style={{ color: '#1C1A17' }}>{s.title}</h3>
-                    <p className="font-sans text-base leading-relaxed mb-6" style={{ color: '#4A4540', maxWidth: 440 }}>{s.body}</p>
+                    <p className="font-sans text-base leading-relaxed mb-6" style={{ color: '#1C1A17', maxWidth: 440 }}>{s.body}</p>
                     <a
                       href="https://www.privyr.com/form/1U3bZG2k#sg-industrial-enquiry"
                       target="_blank"
@@ -539,11 +539,11 @@ function StatisticsBar() {
               <span
                 ref={(el) => { statsRef.current[i] = el }}
                 className="font-serif font-semibold block mb-2"
-                style={{ color: '#4A3E3D', fontSize: 'clamp(36px, 5vw, 64px)' }}
+                style={{ color: '#F5C443', fontSize: 'clamp(36px, 5vw, 64px)' }}
               >
                 0
               </span>
-              <span className="font-mono text-xs uppercase tracking-wider" style={{ color: '#6B6560' }}>
+              <span className="font-mono text-xs uppercase tracking-wider" style={{ color: '#FFFFFF' }}>
                 {s.label}
               </span>
             </div>
@@ -594,7 +594,7 @@ function TestimonialsSection() {
           <div className="lg:sticky lg:top-32 lg:self-start">
             <p className="mono-label mb-3" style={{ color: '#4A3E3D' }}>CLIENT SUCCESS</p>
             <h2 className="section-heading mb-4">Trusted by Industrial Property Investors</h2>
-            <p className="font-sans text-base" style={{ color: '#4A4540' }}>
+            <p className="font-sans text-base" style={{ color: '#1C1A17' }}>
               Hear from business owners and investors who found their ideal industrial spaces through our platform.
             </p>
           </div>
@@ -607,12 +607,12 @@ function TestimonialsSection() {
                 className="testimonial-card bg-white rounded-xl p-8"
                 style={{ border: '1px solid #E8E4DC' }}
               >
-                <p className="font-serif text-lg italic leading-relaxed mb-6" style={{ color: '#4A4540' }}>
+                <p className="font-serif text-lg italic leading-relaxed mb-6" style={{ color: '#1C1A17' }}>
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div>
                   <p className="font-sans text-base font-semibold" style={{ color: '#1C1A17' }}>{t.name}</p>
-                  <p className="font-mono text-xs" style={{ color: '#6B6560' }}>{t.role}</p>
+                  <p className="font-mono text-xs" style={{ color: '#4A3E3D' }}>{t.role}</p>
                 </div>
               </div>
             ))}
@@ -631,7 +631,7 @@ function VisibleSEOContent() {
         <h2 className="font-serif text-3xl font-medium mb-6" style={{ color: '#1C1A17' }}>
           Singapore Industrial Property Guide — New Launch, For Sale & For Rent with No ABSD
         </h2>
-        <div className="font-sans text-base leading-relaxed space-y-4" style={{ color: '#4A4540' }}>
+        <div className="font-sans text-base leading-relaxed space-y-4" style={{ color: '#1C1A17' }}>
           <p>
             <strong>SG Industrial Properties</strong> and <strong>SG Industrial Group</strong> are Singapore's leading industrial property specialists, focusing exclusively on industrial new launch and industrial new project developments, B1 and B2 factories, warehouses, and business parks for sale and for rent across all major industrial districts. Led by <strong>James Goh (CEA R002565A)</strong>, our team of 21 CEA registered industrial specialists has facilitated over S$500 million in transactions since 2009.
           </p>
@@ -671,14 +671,14 @@ function ContactCTA() {
     <section ref={sectionRef} style={{ backgroundColor: '#1C1A17' }} className="py-24">
       <div className="max-w-[640px] mx-auto px-6 text-center">
         <div className="cta-content">
-          <p className="mono-label mb-4" style={{ color: '#4A3E3D' }}>GET STARTED</p>
+          <p className="mono-label mb-4" style={{ color: '#FFFFFF' }}>GET STARTED</p>
           <h2 className="font-serif text-4xl lg:text-5xl font-medium text-white mb-4">
             Ready to Find Your Industrial Space?
           </h2>
-          <p className="font-sans text-base mb-6" style={{ color: 'rgba(255,255,255,0.7)' }}>
+          <p className="font-sans text-base mb-6" style={{ color: '#FFFFFF' }}>
             Contact our team for a free consultation. We'll understand your needs and match you with the best industrial properties in Singapore.
           </p>
-          <p className="font-serif text-2xl mb-8" style={{ color: '#4A3E3D' }}>
+          <p className="font-serif text-2xl mb-8" style={{ color: '#FFFFFF' }}>
             +65 9768 7722 / 8688 2929
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">

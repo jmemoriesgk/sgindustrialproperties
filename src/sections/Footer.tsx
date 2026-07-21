@@ -28,7 +28,7 @@ export default function Footer() {
                 SG INDUSTRIAL PROPERTIES
               </span>
             </Link>
-            <p className="font-sans text-sm leading-relaxed" style={{ color: '#6B6560' }}>
+            <p className="font-sans text-sm leading-relaxed" style={{ color: '#FFFFFF' }}>
               Creating wealth through Singapore Industrial Property Investments since 2009. Specializing in B1 and B2 industrial properties across all major districts.
             </p>
             {/* Social Links */}
@@ -38,7 +38,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-[#4A3E3D]"
-                style={{ color: '#6B6560' }}
+                style={{ color: '#FFFFFF' }}
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -48,10 +48,26 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-[#4A3E3D]"
-                style={{ color: '#6B6560' }}
+                style={{ color: '#FFFFFF' }}
                 aria-label="WhatsApp"
               >
                 <MessageCircle size={20} />
+              </a>
+              <a
+                href="https://whatsapp.com/channel/0029Va0J0Mj3QxSASaTLPF0C"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-[#4A3E3D]"
+                style={{ color: '#FFFFFF' }}
+                aria-label="WhatsApp Channel"
+                title="Join our WhatsApp Channel"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
               </a>
             </div>
           </div>
@@ -67,7 +83,7 @@ export default function Footer() {
                   <Link
                     to={link.path}
                     className="font-sans text-sm transition-colors hover:text-[#4A3E3D]"
-                    style={{ color: '#6B6560' }}
+                    style={{ color: '#FFFFFF' }}
                   >
                     {link.label}
                   </Link>
@@ -87,7 +103,7 @@ export default function Footer() {
                 <a
                   href="tel:+6597687722"
                   className="font-sans text-sm transition-colors hover:text-[#4A3E3D]"
-                  style={{ color: '#6B6560' }}
+                  style={{ color: '#FFFFFF' }}
                 >
                   +65 9768 7722
                 </a>
@@ -97,14 +113,14 @@ export default function Footer() {
                 <a
                   href="tel:+6586882929"
                   className="font-sans text-sm transition-colors hover:text-[#4A3E3D]"
-                  style={{ color: '#6B6560' }}
+                  style={{ color: '#FFFFFF' }}
                 >
                   +65 8688 2929
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} color="#4A3E3D" className="mt-0.5" />
-                <span className="font-sans text-sm" style={{ color: '#6B6560' }}>
+                <span className="font-sans text-sm" style={{ color: '#FFFFFF' }}>
                   Singapore<br />
                   (serving all industrial districts)
                 </span>
@@ -115,14 +131,14 @@ export default function Footer() {
 
         {/* SEO Rich Text Block */}
         <div className="mt-12 pt-8" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-          <p className="font-sans text-xs leading-relaxed max-w-[800px]" style={{ color: '#6B6560' }}>
+          <p className="font-sans text-xs leading-relaxed max-w-[800px]" style={{ color: '#FFFFFF' }}>
             <strong>SG Industrial Properties</strong> and <strong>SG Industrial Group</strong> are Singapore's premier industrial property specialists, focusing on industrial new launch and industrial new project developments, B1 and B2 factories, warehouses, and business parks for sale and for rent. All industrial properties come with <strong>No ABSD</strong> (No Additional Buyer's Stamp Duty), making them highly attractive investments. Led by James Goh (R002565A), our team of 21 CEA registered industrial specialists includes Caroline Chan (R046614C), Alvin Lim (R042513G), Amanda Chuah (R056404H), David Yong (R056841H), Greenie Choo (R023447A), Jimmy Ng (R009588I), John Suar (R009496C), Ken Ng (R024280F), Lee Geok Chew (R023491I), Maverick Cheng (R016259D), Moon Lai (R062936J), Paul Tan (R024959B), Shaun Quai (R073861I), Simon Tham (R023257F), SK Lee (R065066G), Stella Ng (R016155E), Sunny Chua (R052568I), Teressa Tang (R019925J), and Theresa Tan (R052724Z). Our featured industrial new launches include Gate+ at Tukang Jurong, CT Gold at Macpherson (100% fully sold), Generations@Tannery at 71 Tannery Lane, and Gourmet Xchange at 1 Kallang Way. We cover all major Singapore industrial districts including Tuas, Jurong, Woodlands, Changi, Paya Lebar, Macpherson, Kaki Bukit, and Ubi. Contact us for industrial property investment, factory sales, warehouse rentals, and industrial space leasing across Singapore.
           </p>
         </div>
 
         {/* Copyright */}
         <div className="mt-8 pt-6 text-center" style={{ borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-          <p className="font-mono text-xs" style={{ color: '#6B6560' }}>
+          <p className="font-mono text-xs" style={{ color: '#FFFFFF' }}>
             &copy; 2024 SG Industrial Properties. All rights reserved.
           </p>
         </div>

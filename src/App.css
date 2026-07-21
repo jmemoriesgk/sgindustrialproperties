@@ -24,7 +24,7 @@
   font-family: 'Noto Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.75;
-  color: #4A4540;
+  color: #1C1A17;
   margin-bottom: 1.25rem;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .blog-content a:hover {
-  color: #6B6560;
+  color: #4A3E3D;
   text-decoration: underline;
 }
 
@@ -51,7 +51,7 @@
   font-family: 'Noto Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.75;
-  color: #4A4540;
+  color: #1C1A17;
   margin-bottom: 0.5rem;
 }
 
@@ -75,7 +75,7 @@
 .blog-content table td {
   padding: 0.75rem 1rem;
   border: 1px solid #E8E4DC;
-  color: #4A4540;
+  color: #1C1A17;
 }
 
 .blog-content table tr:nth-child(even) {
@@ -96,7 +96,7 @@
   padding-left: 1.25rem;
   margin: 1.5rem 0;
   font-style: italic;
-  color: #6B6560;
+  color: #1C1A17;
 }
 
 .line-clamp-3 {
