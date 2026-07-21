@@ -6,8 +6,5 @@ https://www.sgindustrialproperties.com/* https://sgindustrialproperties.com/:spl
 /admin/ /admin/index.html 200
 /admin/* /admin/:splat 200
 
-# Netlify Functions
-/.netlify/functions/* /.netlify/functions/:splat 200
-
 # SPA fallback (last — only matches if nothing above matched)
 /* /index.html 200

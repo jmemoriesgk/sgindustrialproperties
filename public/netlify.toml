@@ -23,11 +23,6 @@
   force = true
 
 [[redirects]]
-  from = "/.netlify/functions/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
-[[redirects]]
   from = "/listings/data.json"
   to = "/listings/data.json"
   status = 200
