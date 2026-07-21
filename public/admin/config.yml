@@ -69,7 +69,7 @@ collections:
       - { label: "District", name: "district", widget: "string", required: true, hint: "e.g. D22 — Tuas / Jurong" }
       - { label: "District Code", name: "districtCode", widget: "string", required: true, hint: "e.g. D22" }
       - { label: "Description", name: "description", widget: "text", required: true }
-      - { label: "Features", name: "features", widget: "list", field: { widget: "string" } }
+      - { label: "Features", name: "features", widget: "list", field: { name: "feature", widget: "string" } }
       - { label: "Power Supply", name: "powerSupply", widget: "string", default: "60A / 3-phase" }
       - { label: "Ceiling Height", name: "ceilingHeight", widget: "string", default: "6.0m" }
       - { label: "Floor Loading", name: "floorLoading", widget: "string", default: "7.5 kN/m²" }
@@ -77,17 +77,17 @@ collections:
       - { label: "Total Units in Project", name: "totalUnits", widget: "number", value_type: "int", min: 0 }
       - { label: "Units Sold", name: "unitsSold", widget: "number", value_type: "int", min: 0, default: 0 }
       - { label: "TOP Date", name: "topDate", widget: "string", hint: "e.g. Dec 2026 or Completed" }
-      - { label: "Nearby MRT", name: "nearbyMRT", widget: "list", field: { widget: "string" } }
-      - { label: "Nearby Expressway", name: "nearbyExpressway", widget: "list", field: { widget: "string" } }
+      - { label: "Nearby MRT", name: "nearbyMRT", widget: "list", field: { name: "mrt", widget: "string" } }
+      - { label: "Nearby Expressway", name: "nearbyExpressway", widget: "list", field: { name: "expressway", widget: "string" } }
       - { label: "Agent Name", name: "agent", widget: "string", default: "James Goh" }
       - { label: "Agent CEA", name: "agentCea", widget: "string", default: "R002565A" }
       - { label: "Agent Phone", name: "agentPhone", widget: "string", default: "+65 9768 7722" }
       - { label: "Agent Photo", name: "agentPhoto", widget: "image", default: "/images/team-james-new.jpg" }
-      - { label: "Photos", name: "photos", widget: "list", field: { widget: "image" }, default: [] }
-      - { label: "Floor Plans", name: "floorplans", widget: "list", field: { widget: "image" }, default: [] }
+      - { label: "Photos", name: "photos", widget: "list", field: { name: "photo", widget: "image" }, default: [] }
+      - { label: "Floor Plans", name: "floorplans", widget: "list", field: { name: "floorplan", widget: "image" }, default: [] }
       - { label: "Brochure URL", name: "brochure", widget: "string", default: "" }
-      - { label: "Tags", name: "tags", widget: "list", field: { widget: "string" } }
-      - { label: "Suitable For", name: "suitableFor", widget: "list", field: { widget: "string" } }
+      - { label: "Tags", name: "tags", widget: "list", field: { name: "tag", widget: "string" } }
+      - { label: "Suitable For", name: "suitableFor", widget: "list", field: { name: "suitable", widget: "string" } }
       - { label: "SEO Title", name: "metaTitle", widget: "string" }
       - { label: "SEO Description", name: "metaDescription", widget: "text" }
       - { label: "Date Added", name: "dateAdded", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
@@ -110,9 +110,9 @@ collections:
       - { label: "Phone", name: "phone", widget: "string" }
       - { label: "Email", name: "email", widget: "string" }
       - { label: "Bio", name: "bio", widget: "text" }
-      - { label: "Specialties", name: "specialties", widget: "list", field: { widget: "string" } }
-      - { label: "Districts", name: "districts", widget: "list", field: { widget: "string" } }
-      - { label: "Languages", name: "languages", widget: "list", field: { widget: "string" } }
+      - { label: "Specialties", name: "specialties", widget: "list", field: { name: "specialty", widget: "string" } }
+      - { label: "Districts", name: "districts", widget: "list", field: { name: "district", widget: "string" } }
+      - { label: "Languages", name: "languages", widget: "list", field: { name: "language", widget: "string" } }
 
   - name: "settings"
     label: "Site Settings"
