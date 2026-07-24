@@ -6,15 +6,10 @@
 [functions]
   node_bundler = "esbuild"
 
+# Admin panel — must be BEFORE SPA catch-all
 [[redirects]]
-  from = "https://www.sgindustrialproperties.com/*"
-  to = "https://sgindustrialproperties.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/admin"
-  to = "/admin/index.html"
+  from = "/admin/config.yml"
+  to = "/admin/config.yml"
   status = 200
 
 [[redirects]]
@@ -27,6 +22,14 @@
   to = "/admin/:splat"
   status = 200
 
+# Redirect www to non-www
+[[redirects]]
+  from = "https://www.sgindustrialproperties.com/*"
+  to = "https://sgindustrialproperties.com/:splat"
+  status = 301
+  force = true
+
+# SPA fallback — LAST
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -41,6 +44,11 @@
   for = "/robots.txt"
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
 
 [[headers]]
   for = "/*"
