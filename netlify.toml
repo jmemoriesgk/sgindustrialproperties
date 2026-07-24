@@ -6,22 +6,6 @@
 [functions]
   node_bundler = "esbuild"
 
-# Admin panel — must be BEFORE SPA catch-all
-[[redirects]]
-  from = "/admin/config.yml"
-  to = "/admin/config.yml"
-  status = 200
-
-[[redirects]]
-  from = "/admin/"
-  to = "/admin/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/admin/*"
-  to = "/admin/:splat"
-  status = 200
-
 # Redirect www to non-www
 [[redirects]]
   from = "https://www.sgindustrialproperties.com/*"
@@ -29,7 +13,7 @@
   status = 301
   force = true
 
-# SPA fallback — LAST
+# SPA fallback — only for non-file routes
 [[redirects]]
   from = "/*"
   to = "/index.html"

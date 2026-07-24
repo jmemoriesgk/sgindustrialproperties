@@ -9,7 +9,11 @@
 </head>
 <body>
   <script>
-    CMS.init();
+    if (window.CMS) {
+      CMS.init();
+    } else {
+      console.error('CMS not loaded. Check that the Decap CMS script loaded successfully.');
+    }
   </script>
 </body>
 </html>
